@@ -1,8 +1,9 @@
-import { LitElement, html } from "lit";
+import { LitElement, TemplateResult, html } from "lit";
 // @ts-ignore
 import styles from './ilw-footer.styles.css?inline';
 import './ilw-footer.css';
 import CampusLink from "./models/campus-link";
+import { default as wordmark } from "./wordmark.svg"
 
 export class Footer extends LitElement {
     // @property({
@@ -41,7 +42,7 @@ export class Footer extends LitElement {
         return html`<div class="sections">${sections}</div>`
     }
 
-    renderCampusLinks(links: CampusLink[]) {
+    renderCampusLinks(links: CampusLink[]): TemplateResult {
         const listItems = links.map(link => {
             return html`<li><a href="${link.href}">${link.label}</a></li>`
         })
