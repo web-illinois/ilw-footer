@@ -1,4 +1,4 @@
-import { LitElement, html, unsafeCSS } from "lit";
+import { LitElement, html } from "lit";
 // @ts-ignore
 import styles from './ilw-footer.styles.css?inline';
 import './ilw-footer.css';
