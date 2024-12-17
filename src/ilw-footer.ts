@@ -1,18 +1,16 @@
-import { LitElement, TemplateResult, html } from "lit";
+import { LitElement, html } from "lit";
 // @ts-ignore
 import styles from './ilw-footer.styles.css?inline';
 import './ilw-footer.css';
-import CampusLink from "./models/campus-link";
 import { default as wordmark } from "./wordmark.svg"
+import { property } from "lit/decorators.js";
+import { CampusFooterData, CampusFooterSection, CampusLink } from "./models/campus-footer-data";
 
 export class Footer extends LitElement {
-    // @property({
-    //     attribute: false
-    // })
-    // _data = undefined;
-    static properties = {
-        _data: { attribute: false }
-    }
+    @property({
+        attribute: false
+    })
+    _data?: CampusFooterData;
 
     static styles = styles;
 
@@ -33,7 +31,7 @@ export class Footer extends LitElement {
 
     renderCampusSections() {
         if (this._data === undefined) return;
-        const sections = this._data.illinois.sections.map((section: { label: string, links: CampusLink[] }) => {
+        const sections = this._data.illinois.sections.map((section: CampusFooterSection) => {
             return html`<div class="section">
           <h3>${section.label}</h3>
           ${this.renderCampusLinks(section.links)}
