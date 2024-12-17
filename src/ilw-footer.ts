@@ -33,7 +33,7 @@ export class Footer extends LitElement {
 
     renderCampusSections() {
         if (this._data === undefined) return;
-        const sections = this._data.illinois.sections.map(section => {
+        const sections = this._data.illinois.sections.map((section: { label: string, links: CampusLink[] }) => {
             return html`<div class="section">
           <h3>${section.label}</h3>
           ${this.renderCampusLinks(section.links)}
@@ -42,7 +42,7 @@ export class Footer extends LitElement {
         return html`<div class="sections">${sections}</div>`
     }
 
-    renderCampusLinks(links: CampusLink[]): TemplateResult {
+    renderCampusLinks(links: CampusLink[]) {
         const listItems = links.map(link => {
             return html`<li><a href="${link.href}">${link.label}</a></li>`
         })
