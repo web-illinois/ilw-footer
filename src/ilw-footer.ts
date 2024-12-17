@@ -2,6 +2,7 @@ import { LitElement, html } from "lit";
 // @ts-ignore
 import styles from './ilw-footer.styles.css?inline';
 import './ilw-footer.css';
+import CampusLink from "./models/campus-link";
 
 export class Footer extends LitElement {
     // @property({
@@ -40,7 +41,7 @@ export class Footer extends LitElement {
         return html`<div class="sections">${sections}</div>`
     }
 
-    renderCampusLinks(links) {
+    renderCampusLinks(links: CampusLink[]) {
         const listItems = links.map(link => {
             return html`<li><a href="${link.href}">${link.label}</a></li>`
         })
