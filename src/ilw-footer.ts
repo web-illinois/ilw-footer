@@ -4,6 +4,10 @@ import styles from './ilw-footer.styles.css?inline';
 import './ilw-footer.css';
 
 export class Footer extends LitElement {
+    // @property({
+    //     attribute: false
+    // })
+    // _data = undefined;
     static properties = {
         _data: { attribute: false }
     }
