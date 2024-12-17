@@ -1,9 +1,168 @@
 /* Styleable variables are in the base layer so they can be overridden easily */
 @layer base {
     :host {
-
     }
 }
 
 :host {
+    display: block;
+}
+
+.footer {
+    display: block;
+    container-type: inline-size;
+}
+
+.section-container {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+    padding-left: var(--il-footer-padding-left);
+    padding-right: var(--il-footer-padding-right);
+}
+
+.site.section-container {
+    background-color: var(--il-storm-lighter-4);
+    color: var(--il-blue);
+    border-top: 0.5rem solid var(--il-blue);
+    padding-bottom: 2.125rem;
+}
+
+.site.section {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: auto auto auto auto;
+    grid-template-areas: "site-name" "address" "actions" "content";
+    grid-gap: 27px;
+}
+
+.site.section .site-name {
+    grid-area: site-name;
+}
+
+.site.section .actions {
+    grid-area: actions;
+    justify-self: start;
+}
+
+.campus.section-container {
+    background-color: var(--il-blue);
+    color: white;
+    border-top: 0.5rem solid var(--il-orange);
+}
+
+.campus .logo {
+    position: relative;
+    margin: 0;
+    padding: 0.75rem 0.25rem 3.75rem;
+}
+
+.campus .logo a {
+    display: block;
+    position: relative;
+    width: 9.4375rem;
+    height: 1.5625rem;
+}
+
+.campus .logo svg {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.campus svg .illinois {
+    fill: white;
+}
+
+.campus svg .block-i .fill {
+    fill: var(--il-orange);
+}
+
+.campus svg .block-i .outline {
+    fill: white;
+}
+
+.campus .sections {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem 1.25rem;
+}
+
+.campus h3 {
+    margin: 0 0 0.5rem;
+    padding: 0;
+    font: 600 1.5rem/1.5 var(--il-font-sans);
+}
+
+.campus ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.campus li {
+    margin: 0;
+    padding: 0.5rem 0;
+    list-style: none;
+}
+
+.campus a {
+    color: white;
+    font: 400 1.125rem/1.5rem var(--il-font-sans);
+    text-decoration: none;
+}
+
+.campus a:hover,
+campus a:focus {
+    text-decoration: underline;
+}
+
+.campus a:focus {
+    outline: 2px dotted;
+}
+
+.legal.section-container {
+    background-color: var(--il-blue);
+    color: white;
+    border-top: 0.5rem solid var(--il-industrial-darker-2);
+}
+
+.legal a {
+    display: block;
+    padding: 0.3125rem;
+    color: white;
+    font: 400 1rem/1 var(--il-font-sans);
+    text-decoration: underline;
+}
+
+.legal a:focus {
+    outline: 2px dotted;
+}
+
+.cookies-button-and-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.875rem;
+}
+
+@container (min-width: 600px) {
+    .cookies-button-and-links {
+        flex-direction: row;
+    }
+}
+
+@container (min-width: 960px) {
+    .site.section {
+        grid-template-columns: 1fr 2fr;
+        grid-auto-rows: auto auto;
+        grid-template-areas: "site-name actions" "address content";
+    }
+    .site.section .actions {
+        justify-self: end;
+    }
+    .campus .sections {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
