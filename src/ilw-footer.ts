@@ -1,4 +1,4 @@
-import { LitElement, html } from "lit";
+import { LitElement, html, unsafeCSS } from "lit";
 // @ts-ignore
 import styles from './ilw-footer.styles.css?inline';
 import './ilw-footer.css';
@@ -12,7 +12,9 @@ export class Footer extends LitElement {
     })
     _data?: CampusFooterData;
 
-    static styles = styles;
+    static get styles() {
+      return unsafeCSS(styles);
+    }
 
     constructor() {
         super();
