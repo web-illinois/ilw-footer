@@ -16,8 +16,8 @@
 .section-container {
     padding-top: 1.875rem;
     padding-bottom: 1.875rem;
-    padding-left: var(--il-footer-padding-left);
-    padding-right: var(--il-footer-padding-right);
+    padding-left: var(--ilw-footer-padding-left);
+    padding-right: var(--ilw-footer-padding-right);
 }
 
 .site.section-container {
