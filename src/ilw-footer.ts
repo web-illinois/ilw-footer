@@ -7,50 +7,50 @@ import { property } from "lit/decorators.js";
 import { CampusFooterData, CampusFooterSection, CampusLink } from "./models/campus-footer-data";
 
 export class Footer extends LitElement {
-    @property({
-        attribute: false
-    })
-    _data?: CampusFooterData;
+  @property({
+    attribute: false
+  })
+  _data?: CampusFooterData;
 
-    static get styles() {
-      return unsafeCSS(styles);
-    }
+  static get styles() {
+    return unsafeCSS(styles);
+  }
 
-    constructor() {
-        super();
-        this._data = undefined;
-    }
+  constructor() {
+    super();
+    this._data = undefined;
+  }
 
-    connectedCallback() {
-        super.connectedCallback();
-        this.loadData();
-    }
+  connectedCallback() {
+    super.connectedCallback();
+    this.loadData();
+  }
 
-    async loadData() {
-        const resp = await fetch('https://cdn.brand.illinois.edu/data/footer.json');
-        this._data = await resp.json();
-    }
+  async loadData() {
+    const resp = await fetch('https://cdn.brand.illinois.edu/data/footer.json');
+    this._data = await resp.json();
+  }
 
-    renderCampusSections() {
-        if (this._data === undefined) return;
-        const sections = this._data.illinois.sections.map((section: CampusFooterSection) => {
-            return html`<div class="section">
+  renderCampusSections() {
+    if (this._data === undefined) return;
+    const sections = this._data.illinois.sections.map((section: CampusFooterSection) => {
+      return html`<div class="section">
           <h3>${section.label}</h3>
           ${this.renderCampusLinks(section.links)}
         </div>`
-        })
-        return html`<div class="sections">${sections}</div>`
-    }
+    })
+    return html`<div class="sections">${sections}</div>`
+  }
 
-    renderCampusLinks(links: CampusLink[]) {
-        const listItems = links.map(link => {
-            return html`<li><a href="${link.href}">${link.label}</a></li>`
-        })
-        return html`<ul>${listItems}</ul>`;
-    }
+  renderCampusLinks(links: CampusLink[]) {
+    const listItems = links.map(link => {
+      return html`<li><a href="${link.href}">${link.label}</a></li>`
+    })
+    return html`<ul>${listItems}</ul>`;
+  }
 
-    renderCampusFooter() {
-        return html`
+  renderCampusFooter() {
+    return html`
         <div class="campus section-container">
           <div class="campus section">
             <h2 class="logo">
@@ -59,10 +59,10 @@ export class Footer extends LitElement {
             ${this.renderCampusSections()}
           </div>
         </div>`;
-    }
+  }
 
-    renderLegalFooter() {
-        return html`
+  renderLegalFooter() {
+    return html`
         <div class="legal section-container">
           <div class="legal section">
             <div class="cookies-button-and-links">
@@ -73,10 +73,10 @@ export class Footer extends LitElement {
             </div>
           </div>
         </div>`;
-    }
+  }
 
-    renderSiteFooter() {
-        return html`
+  renderSiteFooter() {
+    return html`
         <div class="site section-container">
           <div class="site section">
             <div class="site-name">
@@ -101,17 +101,17 @@ export class Footer extends LitElement {
             </div>
           </div>
         </div>`;
-    }
+  }
 
-    render() {
-        return html`
+  render() {
+    return html`
         <footer class="footer">
           ${this.renderSiteFooter()}
           ${this.renderCampusFooter()}
           ${this.renderLegalFooter()}
         </footer>
       `
-    }
+  }
 }
 
 customElements.define('ilw-footer', Footer);
