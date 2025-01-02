@@ -32,19 +32,7 @@
     ],
     "attributes-fixed": [],
     "attributes-text": [],
-    "attributes": [
-        {
-            "name": "theme",
-            "description": "Color theme used",
-            "depreciated": false,
-            "values": [
-                "",
-                "blue",
-                "orange",
-                "white"
-            ]
-        }
-    ],
+    "attributes": [],
     "classes-fixed": [],
     "classes": [],
     "css-variables": []
