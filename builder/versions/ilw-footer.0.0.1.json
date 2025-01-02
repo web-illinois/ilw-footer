@@ -5,6 +5,7 @@
     "type": "web component",
     "element-name": "ilw-footer",
     "description": "The standard footer component for the Urbana-Champaign campus.",
+    "builder-version": "0.0.1",
     "version": "0.0.1",
     "date": "12/17/2024",
     "css": "https://cdn.toolkit.illinois.edu/ilw-footer/0.0.1/ilw-footer.css",
