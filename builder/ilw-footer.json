@@ -4,7 +4,7 @@
     "github": "https://github.com/web-illinois/ilw-footer/",
     "type": "web component",
     "element-name": "ilw-footer",
-    "description": "Description for builder.",
+    "description": "The standard campus footer should appear at the bottom of every page of a campus website.",
     "purpose": "Imperative mood purpose for builder homepage.",
     "toolkit-version": "",
     "production-version": "",
