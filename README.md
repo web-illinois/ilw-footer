@@ -23,7 +23,7 @@ Social media section: The following sites’ URLs will be recognized and automat
 - Snapchat
 - Twitter
 - Weibo
-- Whatsapp
+- WhatsApp
 - X
 - YouTube
 
@@ -42,19 +42,106 @@ For sites with multiple sponsorships, this is a common location to collect up th
 
 ## Code Examples
 
+### Unit Information
+
+The footer contains slots for site name (`site-name`), primary unit (`primary-unit`), and address (`address`).
+
 ```html
-<ilw-footer></ilw-footer>
+<ilw-footer>
+    <p slot="primary-unit"><a href="/">Strategic Communications and Marketing</a></p>
+
+    <p slot="site-name"><a href="http://example.com/">Example Site Name</a></p>
+    
+    <address slot="address">
+      <p>5678 West Example Street<br>
+        MC-0000<br>
+        Champaign, IL 61820</p>
+      <p>Email: <a href="mailto:address@example.com">address@example.com</a></p>
+      <p>Phone: <a href="tel:+12175551234">(217) 555-1234</a></p>
+    </address>
+</ilw-footer>
 ```
 
-## Accessibility Notes and Use
+### Social Media
 
-Consider accessibility, both for building the component and for its use:
+The social media slot (`social`) should be used for social media links. Site icons will be added automatically for supported sites.
 
-- Is there sufficient color contrast?
-- Can the component be fully understood without colors?
-- Does the component need alt text or ARIA roles?
-- Can the component be navigated with a keyboard? Is the tab order correct?
-- Are focusable elements interactive, and interactive elements focusable?
-- Are form fields, figures, fieldsets and other interactive elements labelled?
+```html
+<ilw-footer>
+    <p slot="site-name"><a href="/">Sample Footer</a></p>
+
+    <nav slot="social" aria-label="Social media">
+      <ul>
+        <li><a data-service="twitter" href="http://example.com/">Twitter</a></li>
+        <li><a data-service="youtube" href="http://example.com/">YouTube</a></li>
+        <li><a data-service="facebook" href="http://example.com/">Facebook</a></li>
+        <li><a data-service="instagram" href="http://example.com/">Instagram</a></li>
+        <li><a data-service="linkedin" href="http://example.com/">LinkedIn</a></li>
+        <li><a data-service="pinterest" href="http://example.com/">Pinterest</a></li>
+        <li><a data-service="snapchat" href="http://example.com/">Snapchat</a></li>
+        <li><a data-service="weibo" href="http://example.com/">Weibo</a></li>
+        <li><a data-service="whatsapp" href="http://example.com/">WhatsApp</a></li>
+        <li><a data-service="x" href="http://example.com/">X</a></li>
+      </ul>
+    </nav>
+</ilw-footer>
+```
+
+### Action Links
+
+Use the action slot (`actions`) for call-to-action links.
+
+```html
+<ilw-footer>
+    <p slot="site-name"><a href="/">Sample Footer</a></p>
+
+    <div slot="actions">
+      <a href="/give">Give</a>
+      <a href="/apply">Apply</a>
+    </div>
+</ilw-footer>
+```
+
+### Menu Columns
+
+Up to three columns can be defined in the right two-thirds of the footer.
+
+```html
+<ilw-footer>
+    <nav class="ilw-footer-menu" aria-labelledby="menu-1">
+      <h2 id="menu-1">First Menu</h2>
+      <ul>
+        <li><a href="http://example.com/">Link one</a></li>
+        <li><a href="http://example.com/">Link two</a></li>
+        <li><a href="http://example.com/">Link three</a></li>
+        <li><a href="http://example.com/">Link four</a></li>
+      </ul>
+    </nav>
+
+    <nav class="ilw-footer-menu" aria-labelledby="menu-2">
+      <h2 id="menu-2">Second Menu</h2>
+      <ul>
+        <li><a href="http://example.com/">Link one</a></li>
+        <li><a href="http://example.com/">Link two</a></li>
+        <li><a href="http://example.com/">Link three</a></li>
+        <li><a href="http://example.com/">Link four</a></li>
+      </ul>
+    </nav>
+
+    <nav class="ilw-footer-menu" aria-labelledby="menu-3">
+      <h2 id="menu-3">Third Menu</h2>
+      <ul>
+        <li><a href="http://example.com/">Link one</a></li>
+        <li><a href="http://example.com/">Link two</a></li>
+        <li><a href="http://example.com/">Link three</a></li>
+        <li><a href="http://example.com/">Link four</a></li>
+      </ul>
+    </nav>
+</ilw-footer>
+```
 
 ## External References
+
+- [HTML Anchor element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
+- [Link accessibility](https://www.w3.org/WAI/WCAG21/Techniques/html/H30.html)
+- [Using aria-labelledby](https://www.w3.org/WAI/tutorials/forms/labels/#using-aria-labelledby)
