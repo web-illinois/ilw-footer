@@ -14,12 +14,18 @@ The footer component defines an area at the bottom of the page which should cont
 
 ### Structured additions: Social media, University footer links
 
-Social media section: The following sites’ URLs will be recognized and automatically replaced with the correct icon when contained in a Social Media div. (See the Syntax guide for more details.)
+Social media section: The following sites’ URLs will be recognized and automatically replaced with the correct icon when contained in a Social Media div. (See the code examples for more details.)
 
-- Instagram
-- Twitter
-- YouTube
 - Facebook
+- Instagram
+- LinkedIn
+- Pinterest
+- Snapchat
+- Twitter
+- Weibo
+- Whatsapp
+- X
+- YouTube
 
 University standard footer elements: The following tags will automatically populate with the University-wide link for these items.
 
