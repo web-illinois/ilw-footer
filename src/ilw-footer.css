@@ -1,18 +1,6 @@
 @import url("https://cdn.brand.illinois.edu/illinois.css");
 
 ilw-footer {
-    --ilw-footer-padding-left: var(--ilw-margin--side);
-    --ilw-footer-padding-right: var(--ilw-margin--side);
-}
-
-@media (max-width: 30rem) {
-    ilw-footer {
-        --ilw-footer-padding-left: 1.25rem;
-        --ilw-footer-padding-right: 1.25rem;
-    }
-}
-
-ilw-footer {
     font: 400 1rem var(--il-font-sans);
 
     a {

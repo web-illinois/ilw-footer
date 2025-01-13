@@ -27,6 +27,12 @@
     padding-bottom: 2.125rem;
 }
 
+.site.section,
+.campus.section,
+.legal.section {
+    margin: 0 var(--ilw-margin--side, 0);
+}
+
 .site.section {
     display: grid;
     grid-template-columns: auto;
