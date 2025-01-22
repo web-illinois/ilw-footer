@@ -6,7 +6,8 @@
     "element-name": "ilw-footer",
     "description": "The standard campus footer should appear at the bottom of every page of a campus website.",
     "purpose": "Create a thematically unified footer navigation for university websites.",
-    "toolkit-version": "",
-    "production-version": "",
-    "development-version": "0.0"
+    "toolkit-version": "1.0.0",
+    "production-version": "1.0.0",
+    "development-version": "1.0.0",
+    "builder-override-link": "/notes/footer/index.html"
 }
