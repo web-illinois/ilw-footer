@@ -76,15 +76,14 @@ export class Footer extends LitElement {
   }
 
   renderSiteFooter() {
+    // site name, social media icons, address, phone, email,  primary unit.
     return html`
         <div class="site section-container">
           <div class="site section">
             <div class="site-name">
               <slot name="site-name"></slot>
             </div>
-            <div class="actions">
-              <slot name="actions"></slot>
-            </div>
+            
             <div class="contact">
               <div class="social">
                 <slot name="social"></slot>
@@ -95,6 +94,9 @@ export class Footer extends LitElement {
               <div class="primary-unit">
                 <slot name="primary-unit"></slot>
               </div>
+            </div>
+            <div class="actions">
+              <slot name="actions"></slot>
             </div>
             <div class="content">
               <slot></slot>
