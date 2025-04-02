@@ -138,6 +138,7 @@ ilw-footer {
             outline: 2px dotted var(--il-blue);
         }
 
+        a[data-service="bluesky"],
         a[data-service="facebook"],
         a[data-service="flickr"],
         a[data-service="instagram"],
@@ -155,6 +156,11 @@ ilw-footer {
         a[data-service="yelp"],
         a[data-service="youtube"] {
             display: block;
+        }
+
+        a[data-service="bluesky"] {
+            --ilw-footer-social-icon: url("https://cdn.brand.illinois.edu/icons/solid/blue/bluesky.svg");
+            --ilw-footer-social-icon-hover: url("https://cdn.brand.illinois.edu/icons/solid/orange/bluesky.svg");
         }
 
         a[data-service="facebook"] {
