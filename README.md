@@ -72,16 +72,24 @@ The social media slot (`social`) should be used for social media links. Site ico
 
     <nav slot="social" aria-label="Social media">
       <ul>
-        <li><a data-service="twitter" href="http://example.com/">Twitter</a></li>
-        <li><a data-service="youtube" href="http://example.com/">YouTube</a></li>
+        <li><a data-service="bluesky" href="http://example.com/">Bluesky</a></li>
+        <li><a data-service="calendar" href="http://example.com/">Calendar</a></li>
         <li><a data-service="facebook" href="http://example.com/">Facebook</a></li>
+        <li><a data-service="flickr" href="http://example.com/">flickr</a></li>
         <li><a data-service="instagram" href="http://example.com/">Instagram</a></li>
         <li><a data-service="linkedin" href="http://example.com/">LinkedIn</a></li>
         <li><a data-service="pinterest" href="http://example.com/">Pinterest</a></li>
+        <li><a data-service="reddit" href="http://example.com/">Reddit</a></li>
         <li><a data-service="snapchat" href="http://example.com/">Snapchat</a></li>
+        <li><a data-service="spotify" href="http://example.com/">Spotify</a></li>
+        <li><a data-service="threads" href="http://example.com/">Threads</a></li>
+        <li><a data-service="tiktok" href="http://example.com/">TikTok</a></li>
+        <li><a data-service="twitter" href="http://example.com/">Twitter</a></li>
         <li><a data-service="weibo" href="http://example.com/">Weibo</a></li>
         <li><a data-service="whatsapp" href="http://example.com/">WhatsApp</a></li>
         <li><a data-service="x" href="http://example.com/">X</a></li>
+        <li><a data-service="yelp" href="http://example.com/">Yelp</a></li>
+        <li><a data-service="youtube" href="http://example.com/">YouTube</a></li>
       </ul>
     </nav>
 </ilw-footer>
