@@ -65,7 +65,7 @@ ilw-footer {
         color: var(--ilw-link--focus-color);
         background-color: var(--ilw-link--focus-background-color);
         outline: var(--ilw-link--focus-outline);
-        text-decoration-thickness: 0.1em;
+        text-decoration-thickness: 0.1rem;
     }
 
     /* Primary unit */
@@ -97,7 +97,7 @@ ilw-footer {
         color: var(--ilw-link--focus-color);
         background-color: var(--ilw-link--focus-background-color);
         outline: var(--ilw-link--focus-outline);
-        text-decoration-thickness: 0.1em;
+        text-decoration-thickness: 0.1rem;
     }
 
     /* Social media */
@@ -149,8 +149,10 @@ ilw-footer {
         }
 
         a:focus {
-            background-image: var(--ilw-footer-social-icon-hover);
-            outline: 2px dotted var(--il-blue);
+            color: var(--ilw-link--focus-color);
+            background-color: var(--ilw-link--focus-background-color);
+            outline: var(--ilw-link--focus-outline);
+            outline-width: 0.2rem;
         }
 
         a[data-service="bluesky"],
