@@ -10,7 +10,6 @@ ilw-footer {
 
     a:hover,
     a:focus {
-        /* color: var(--il-altgeld); */
         text-decoration: underline;
         cursor: pointer;
     }
@@ -19,6 +18,7 @@ ilw-footer {
         color: var(--ilw-link--focus-color);
         background-color: var(--ilw-link--focus-background-color);
         outline: var(--ilw-link--focus-outline);
+        text-decoration-thickness: 0.1em;
     }
 
     address {
@@ -50,14 +50,18 @@ ilw-footer {
     }
 
     a[slot="site-name"]:hover,
-    *[slot="site-name"] a:hover {
+    *[slot="site-name"] a:hover,
+    a[slot="site-name"]:focus,
+    *[slot="site-name"] a:focus {
         text-decoration: underline;
-        color: var(--il-altgeld);
     }
 
     a[slot="site-name"]:focus,
     *[slot="site-name"] a:focus {
-        outline: 2px dotted;
+        color: var(--ilw-link--focus-color);
+        background-color: var(--ilw-link--focus-background-color);
+        outline: var(--ilw-link--focus-outline);
+        text-decoration-thickness: 0.1em;
     }
 
     /* Primary unit */
