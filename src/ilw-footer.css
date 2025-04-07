@@ -34,6 +34,10 @@ ilw-footer {
         padding: 0;
     }
 
+    address a:hover {
+        color: var(--il-altgeld);
+    }
+
     /* Site name */
 
     *[slot="site-name"] {
