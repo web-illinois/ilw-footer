@@ -18,7 +18,7 @@ ilw-footer {
         color: var(--ilw-link--focus-color);
         background-color: var(--ilw-link--focus-background-color);
         outline: var(--ilw-link--focus-outline);
-        text-decoration-thickness: 0.1em;
+        text-decoration-thickness: 0.1rem;
     }
 
     address {
@@ -310,6 +310,23 @@ ilw-footer {
             display: block;
             margin: 12px 0 0;
             font: 400 18px/25px var(--il-font-sans);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        a:focus {
+            color: var(--ilw-link--focus-color);
+            background-color: var(--ilw-link--focus-background-color);
+            outline: var(--ilw-link--focus-outline);
+            text-decoration-thickness: 0.1rem;
         }
     }
 }
