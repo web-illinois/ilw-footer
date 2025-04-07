@@ -8,6 +8,19 @@ ilw-footer {
         text-decoration: underline;
     }
 
+    a:hover,
+    a:focus {
+        color: var(--il-altgeld);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    a:focus {
+        color: var(--ilw-link--focus-color);
+        background-color: var(--ilw-link--focus-background-color);
+        outline: var(--ilw-link--focus-outline);
+    }
+
     address {
         all: inherit;
         display: block;
@@ -19,15 +32,6 @@ ilw-footer {
         display: block;
         margin: 0;
         padding: 0;
-    }
-
-    address a {
-        color: var(--il-blue);
-    }
-
-    a:hover,
-    a:focus {
-        color: var(--il-altgeld);
     }
 
     /* Site name */
