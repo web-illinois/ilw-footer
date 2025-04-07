@@ -10,7 +10,7 @@ ilw-footer {
 
     a:hover,
     a:focus {
-        color: var(--il-altgeld);
+        /* color: var(--il-altgeld); */
         text-decoration: underline;
         cursor: pointer;
     }
