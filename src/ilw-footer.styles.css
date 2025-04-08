@@ -124,7 +124,10 @@
 }
 
 .campus a:focus {
-    outline: 2px dotted;
+    fill: var(--ilw-link--focus-color);
+    background-color: var(--ilw-link--focus-background-color);
+    outline: var(--ilw-link--focus-outline);
+    color: var(--il-blue)
 }
 
 .legal.section-container {
@@ -141,8 +144,15 @@
     text-decoration: underline;
 }
 
-.legal a:focus {
+.legal a:hover {
     outline: 2px dotted;
+}
+
+.legal a:focus {
+    fill: var(--ilw-link--focus-color);
+    background-color: var(--ilw-link--focus-background-color);
+    outline: var(--ilw-link--focus-outline);
+    color: var(--il-blue);
 }
 
 .cookies-button-and-links {
