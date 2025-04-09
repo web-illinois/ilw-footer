@@ -8,6 +8,19 @@ ilw-footer {
         text-decoration: underline;
     }
 
+    a:hover,
+    a:focus {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    a:focus {
+        color: var(--ilw-link--focus-color);
+        background-color: var(--ilw-link--focus-background-color);
+        outline: var(--ilw-link--focus-outline);
+        text-decoration-thickness: 0.1rem;
+    }
+
     address {
         all: inherit;
         display: block;
@@ -21,12 +34,7 @@ ilw-footer {
         padding: 0;
     }
 
-    address a {
-        color: var(--il-blue);
-    }
-
-    a:hover,
-    a:focus {
+    address a:hover {
         color: var(--il-altgeld);
     }
 
@@ -46,14 +54,18 @@ ilw-footer {
     }
 
     a[slot="site-name"]:hover,
-    *[slot="site-name"] a:hover {
+    *[slot="site-name"] a:hover,
+    a[slot="site-name"]:focus,
+    *[slot="site-name"] a:focus {
         text-decoration: underline;
-        color: var(--il-altgeld);
     }
 
     a[slot="site-name"]:focus,
     *[slot="site-name"] a:focus {
-        outline: 2px dotted;
+        color: var(--ilw-link--focus-color);
+        background-color: var(--ilw-link--focus-background-color);
+        outline: var(--ilw-link--focus-outline);
+        text-decoration-thickness: 0.1rem;
     }
 
     /* Primary unit */
@@ -74,15 +86,18 @@ ilw-footer {
     }
 
     a[slot="primary-unit"]:hover,
-    *[slot="primary-unit"] a:hover {
+    *[slot="primary-unit"] a:hover,
+    a[slot="primary-unit"]:focus,
+    *[slot="primary-unit"] a:focus {
         text-decoration: underline;
-        color: var(--il-altgeld);
     }
 
     a[slot="primary-unit"]:focus,
     *[slot="primary-unit"] a:focus {
-        color: var(--il-altgeld);
-        outline: 2px dotted;
+        color: var(--ilw-link--focus-color);
+        background-color: var(--ilw-link--focus-background-color);
+        outline: var(--ilw-link--focus-outline);
+        text-decoration-thickness: 0.1rem;
     }
 
     /* Social media */
@@ -134,8 +149,10 @@ ilw-footer {
         }
 
         a:focus {
-            background-image: var(--ilw-footer-social-icon-hover);
-            outline: 2px dotted var(--il-blue);
+            color: var(--ilw-link--focus-color);
+            background-color: var(--ilw-link--focus-background-color);
+            outline: var(--ilw-link--focus-outline);
+            outline-width: 0.2rem;
         }
 
         a[data-service="bluesky"],
@@ -293,6 +310,23 @@ ilw-footer {
             display: block;
             margin: 12px 0 0;
             font: 400 18px/25px var(--il-font-sans);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        a:focus {
+            color: var(--ilw-link--focus-color);
+            background-color: var(--ilw-link--focus-background-color);
+            outline: var(--ilw-link--focus-outline);
+            text-decoration-thickness: 0.1rem;
         }
     }
 }
