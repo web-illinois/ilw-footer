@@ -76,6 +76,10 @@
     height: 100%;
 }
 
+.campus .logo a:hover {
+outline: 2px dotted;    
+}
+
 .campus svg .illinois {
     fill: white;
 }
