@@ -5,28 +5,27 @@ test('the footer contains a footer landmark', async ({ page }) => {
   const val = await page.evaluate(() => {
     return document.querySelector('ilw-footer').shadowRoot.querySelector('footer');
   })
-  await expect(val).not.toBeNull();
+  expect(val).not.toBeNull();
 })
 
-test('component won\'t try to define itself twice', async ({ page }) => {
-  const script = `
-    import { Footer } from 'lit';
-    import { TestFooter } from 'ilw-footer';
-    export default class TestFooter extends Footer {
-        constructor() { super(); }
-    };
-    customElements.define('test-footer', TestFooter);
-  `
+test('component handles multiple defines gracefully', async ({ page }) => {
+  await page.goto('tests/html/double-import.html');
+  await page.waitForLoadState('domcontentloaded');
 
-  await page.addScriptTag({
-    content: script,
-    type: 'module'
-  });
-
-  await page.goto('samples/index.html');
-  const val = await page.evaluate(() => {
+  const footer = await page.evaluate(() => {
     return document.querySelector('ilw-footer').shadowRoot.querySelector('footer');
   });
 
-  expect(val).not.toBeNull();
+  expect(footer).not.toBeNull();
+})
+
+test('component handles inheritance gracefully', async ({ page }) => {
+  await page.goto('tests/html/double-import.html');
+  await page.waitForLoadState('domcontentloaded');
+
+  const tester = await page.evaluate(() => {
+    return document.querySelector('test-footer').shadowRoot.querySelector('#testFooter');
+  });
+
+  expect(tester).not.toBeNull();
 })
