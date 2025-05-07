@@ -116,4 +116,4 @@ export class Footer extends LitElement {
   }
 }
 
-customElements.define('ilw-footer', Footer);
+customElements.get('ilw-footer') || customElements.define('ilw-footer', Footer);
