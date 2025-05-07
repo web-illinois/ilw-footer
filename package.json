@@ -4,7 +4,7 @@
     "repository": "github:web-illinois/ilw-footer",
     "private": false,
     "license": "MIT",
-    "version": "1.0.9",
+    "version": "1.1.0",
     "type": "module",
     "files": [
         "src/**",
@@ -15,7 +15,11 @@
         ".": {
             "import": "./dist/ilw-footer.js",
             "require": "./dist/ilw-footer.cjs",
-            "default": "./dist/ilw-footer.js"
+            "default": "./dist/ilw-footer.js",
+            "types": [
+                "./dist/ilw-footer.d.ts",
+                "./dist/wordmark.svg.d.ts"
+            ]
         },
         "./ilw-footer.css": {
             "import": "./dist/ilw-footer.css"
