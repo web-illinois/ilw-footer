@@ -12,13 +12,18 @@ export class Footer extends LitElement {
   })
   _data?: CampusFooterData;
 
+  @property({
+    attribute: true
+  })
+  source: String;
+
   static get styles() {
     return unsafeCSS(styles);
   }
 
   constructor() {
     super();
-    this._data = undefined;
+    this.source = 'Illinois_App';
   }
 
   connectedCallback() {
@@ -29,6 +34,10 @@ export class Footer extends LitElement {
   async loadData() {
     const resp = await fetch('https://cdn.brand.illinois.edu/data/footer.json');
     this._data = await resp.json();
+  }
+
+  getUtmSource() {
+    return this.source || 'Illinois_App';
   }
 
   renderCampusSections() {
@@ -44,7 +53,7 @@ export class Footer extends LitElement {
 
   renderCampusLinks(links: CampusLink[]) {
     const listItems = links.map(link => {
-      return html`<li><a href="${link.href}">${link.label}</a></li>`
+      return html`<li><a href="${link.href}?utm_source=${this.getUtmSource()}&utm_medium=web&utm_campaign=Footer">${link.label}</a></li>`
     })
     return html`<ul>${listItems}</ul>`;
   }
@@ -54,7 +63,7 @@ export class Footer extends LitElement {
         <div class="campus section-container">
           <div class="campus section">
             <h2 class="logo">
-              <a href="https://illinois.edu/">${wordmark}</a>
+              <a href="https://illinois.edu/?utm_source=${this.getUtmSource()}&utm_medium=web&utm_campaign=Footer">${wordmark}</a>
             </h2>
             ${this.renderCampusSections()}
           </div>
@@ -67,9 +76,9 @@ export class Footer extends LitElement {
           <div class="legal section">
             <div class="cookies-button-and-links">
               <slot name="cookies-button"></slot>
-              <a href="https://www.vpaa.uillinois.edu/resources/web_privacy">Privacy</a></li>
-              <a href="https://illinois.edu/resources/website/copyright.html">Copyright</a></li>
-              <a href="https://illinois.edu/resources/website/accessibility.html">Accessibility</a></li>
+              <a href="https://www.vpaa.uillinois.edu/resources/web_privacy?utm_source=${this.getUtmSource()}&utm_medium=web&utm_campaign=Footer">Privacy</a></li>
+              <a href="https://illinois.edu/resources/website/copyright.html?utm_source=${this.getUtmSource()}&utm_medium=web&utm_campaign=Footer">Copyright</a></li>
+              <a href="https://illinois.edu/resources/website/accessibility.html?utm_source=${this.getUtmSource()}&utm_medium=web&utm_campaign=Footer">Accessibility</a></li>
             </div>
           </div>
         </div>`;
