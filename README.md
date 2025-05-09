@@ -12,6 +12,10 @@ The footer component defines an area at the bottom of the page which should cont
 
 ## Customizations and Notes
 
+### Attributes
+
+* `source`: The UTM source set for the header going back to the Illinois web site. Defaults to *Illinois_App*. This is added to all campus links in the footer. 
+
 ### Structured additions: Social media, University footer links
 
 Social media section: The following sites’ URLs will be recognized and automatically replaced with the correct icon when contained in a Social Media div. (See the code examples for more details.)
