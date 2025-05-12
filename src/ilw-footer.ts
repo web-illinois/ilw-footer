@@ -69,7 +69,7 @@ export class Footer extends LitElement {
         <div class="campus section-container">
           <div class="campus section">
             <h2 class="logo">
-              <a href="https://illinois.edu/">${wordmark}</a>
+              <a href="https://illinois.edu/?${this._utm}">${wordmark}</a>
             </h2>
             ${this.renderCampusSections()}
           </div>
@@ -82,9 +82,9 @@ export class Footer extends LitElement {
           <div class="legal section">
             <div class="cookies-button-and-links">
               <slot name="cookies-button"></slot>
-              <a href="https://www.vpaa.uillinois.edu/resources/web_privacy">Privacy</a></li>
-              <a href="https://illinois.edu/resources/website/copyright.html">Copyright</a></li>
-              <a href="https://illinois.edu/resources/website/accessibility.html">Accessibility</a></li>
+              <a href="https://www.vpaa.uillinois.edu/resources/web_privacy?${this._utm}">Privacy</a></li>
+              <a href="https://illinois.edu/resources/website/copyright.html?${this._utm}">Copyright</a></li>
+              <a href="https://illinois.edu/resources/website/accessibility.html?${this._utm}">Accessibility</a></li>
             </div>
           </div>
         </div>`;
