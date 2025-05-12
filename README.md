@@ -171,6 +171,16 @@ To add a cookie button, use the cookies button slot (`cookies-button`) and inclu
 </ilw-footer>
 ```
 
+### Custom Source Identifier
+
+Links in the campus footer section (those added and maintained as part of the campus brand) contain a UTM code for better analysis of brand implementation. You may set a custom UTM source to distinguish your site's traffic within those reports. If no source is set, the default value (`Illinois_App`) will be used.
+
+```html
+<ilw-footer source="Sample_Site">
+  <p slot="site-name">Sample Site</p>
+</ilw-footer>
+```
+
 ## External References
 
 - [HTML Anchor element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
