@@ -11,14 +11,19 @@ export class Footer extends LitElement {
 
   @property({
     attribute: true,
-    type: String
+    reflect: true,
   })
-  source?: string
+  source: string
 
   @property({
     attribute: false
   })
   _data?: CampusFooterData;
+
+  @property({
+    attribute: false,
+  })
+  _utm?: string
 
   static get styles() {
     return unsafeCSS(styles);
@@ -33,6 +38,7 @@ export class Footer extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     this.loadData();
+    this._utm = this.generateUtm();
   }
 
   async loadData() {
@@ -53,7 +59,7 @@ export class Footer extends LitElement {
 
   renderCampusLinks(links: CampusLink[]) {
     const listItems = links.map(link => {
-      return html`<li><a href="${link.href}">${link.label}</a></li>`
+      return html`<li><a href="${link.href}?${this._utm}">${link.label}</a></li>`
     })
     return html`<ul>${listItems}</ul>`;
   }
@@ -122,6 +128,11 @@ export class Footer extends LitElement {
           ${this.renderLegalFooter()}
         </footer>
       `
+  }
+
+  private generateUtm(): string {
+    const utm = `utm_source=${this.source}&utm_medium=web&utm_campaign=Footer`;
+    return utm;
   }
 }
 
