@@ -29,3 +29,27 @@ test('component handles inheritance gracefully', async ({ page }) => {
 
   expect(tester).not.toBeNull();
 })
+
+test('campus links use utm with default value', async ({ page }) => {
+  const expected = 'utm_source=Illinois_App&utm_medium=web&utm_campaign=Footer';
+
+  await page.goto('samples/index.html');
+  const actual = await page.locator('.campus.section .section')
+    .getByRole('link')
+    .first()
+    .getAttribute('href')
+
+  expect(actual).toContain(expected);
+})
+
+test('custom source reflected in utm values', async ({ page }) => {
+  const expected = 'utm_source=Example_Site&utm_medium=web&utm_campaign=Footer';
+
+  await page.goto('samples/custom-source.html');
+  const actual = await page.locator('.campus.section .section')
+    .getByRole('link')
+    .first()
+    .getAttribute('href')
+
+  expect(actual).toContain(expected);
+})
