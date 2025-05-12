@@ -7,6 +7,14 @@ import { property } from "lit/decorators.js";
 import { CampusFooterData, CampusFooterSection, CampusLink } from "./models/campus-footer-data";
 
 export class Footer extends LitElement {
+  private readonly _defaultSource = 'Illinois_App';
+
+  @property({
+    attribute: true,
+    type: String
+  })
+  source?: string
+
   @property({
     attribute: false
   })
@@ -18,6 +26,7 @@ export class Footer extends LitElement {
 
   constructor() {
     super();
+    this.source = this._defaultSource;
     this._data = undefined;
   }
 
