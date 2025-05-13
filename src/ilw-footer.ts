@@ -7,10 +7,23 @@ import { property } from "lit/decorators.js";
 import { CampusFooterData, CampusFooterSection, CampusLink } from "./models/campus-footer-data";
 
 export class Footer extends LitElement {
+  private readonly _defaultSource = 'Illinois_App';
+
+  @property({
+    attribute: true,
+    reflect: true,
+  })
+  source: string
+
   @property({
     attribute: false
   })
   _data?: CampusFooterData;
+
+  @property({
+    attribute: false,
+  })
+  _utm?: string
 
   static get styles() {
     return unsafeCSS(styles);
@@ -18,12 +31,14 @@ export class Footer extends LitElement {
 
   constructor() {
     super();
+    this.source = this._defaultSource;
     this._data = undefined;
   }
 
   connectedCallback() {
     super.connectedCallback();
     this.loadData();
+    this._utm = this.generateUtm();
   }
 
   async loadData() {
@@ -44,7 +59,7 @@ export class Footer extends LitElement {
 
   renderCampusLinks(links: CampusLink[]) {
     const listItems = links.map(link => {
-      return html`<li><a href="${link.href}">${link.label}</a></li>`
+      return html`<li><a href="${link.href}?${this._utm}">${link.label}</a></li>`
     })
     return html`<ul>${listItems}</ul>`;
   }
@@ -54,7 +69,7 @@ export class Footer extends LitElement {
         <div class="campus section-container">
           <div class="campus section">
             <h2 class="logo">
-              <a href="https://illinois.edu/">${wordmark}</a>
+              <a href="https://illinois.edu/?${this._utm}">${wordmark}</a>
             </h2>
             ${this.renderCampusSections()}
           </div>
@@ -67,9 +82,9 @@ export class Footer extends LitElement {
           <div class="legal section">
             <div class="cookies-button-and-links">
               <slot name="cookies-button"></slot>
-              <a href="https://www.vpaa.uillinois.edu/resources/web_privacy">Privacy</a></li>
-              <a href="https://illinois.edu/resources/website/copyright.html">Copyright</a></li>
-              <a href="https://illinois.edu/resources/website/accessibility.html">Accessibility</a></li>
+              <a href="https://www.vpaa.uillinois.edu/resources/web_privacy?${this._utm}">Privacy</a></li>
+              <a href="https://illinois.edu/resources/website/copyright.html?${this._utm}">Copyright</a></li>
+              <a href="https://illinois.edu/resources/website/accessibility.html?${this._utm}">Accessibility</a></li>
             </div>
           </div>
         </div>`;
@@ -113,6 +128,11 @@ export class Footer extends LitElement {
           ${this.renderLegalFooter()}
         </footer>
       `
+  }
+
+  private generateUtm(): string {
+    const utm = `utm_source=${this.source}&utm_medium=web&utm_campaign=Footer`;
+    return utm;
   }
 }
 
