@@ -1,4 +1,4 @@
-import { LitElement, html, unsafeCSS } from "lit";
+import { CSSResult, LitElement, css, html, unsafeCSS } from "lit";
 // @ts-ignore
 import styles from './ilw-footer.styles.css?inline';
 import './ilw-footer.css';
@@ -25,7 +25,7 @@ export class Footer extends LitElement {
   })
   _utm?: string
 
-  static get styles() {
+  static get styles(): CSSResult|CSSResult[] {
     return unsafeCSS(styles);
   }
 
