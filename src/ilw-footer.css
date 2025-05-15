@@ -105,9 +105,9 @@ ilw-footer {
         padding-left: 0;
     }
 
-        ul[slot="primary-unit"] li {
-            list-style: none;
-        }
+    ul[slot="primary-unit"] li {
+        list-style: none;
+    }
 
     /* Social media */
 
