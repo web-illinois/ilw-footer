@@ -100,6 +100,15 @@ ilw-footer {
         text-decoration-thickness: 0.1rem;
     }
 
+    ul[slot="primary-unit"] {
+        list-style: none;
+        padding-left: 0;
+    }
+
+        ul[slot="primary-unit"] li {
+            list-style: none;
+        }
+
     /* Social media */
 
     nav[slot="social"] {
