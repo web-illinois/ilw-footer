@@ -1,6 +1,6 @@
 import { html } from "lit";
 
-export default html`<svg viewBox="0 0 151 26" xmlns="http://www.w3.org/2000/svg">
+export default html`<svg role=”img” viewBox="0 0 151 26" xmlns="http://www.w3.org/2000/svg">
     <title>Illinois</title>
     <g class="block-i">
       <path class="outline" d="M17.89,6.96V0H0v6.96h3.98v11.93H0v6.96h17.89v-6.96h-3.98V6.96H17.89z M13.91,19.88h2.98v4.97H0.99v-4.97
