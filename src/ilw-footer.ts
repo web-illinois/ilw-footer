@@ -1,4 +1,4 @@
-import { CSSResult, LitElement, PropertyValues, html, unsafeCSS } from "lit";
+import { CSSResult, CSSResultGroup, LitElement, PropertyValues, html, unsafeCSS } from "lit";
 // @ts-ignore
 import styles from './ilw-footer.styles.css?inline';
 import './ilw-footer.css';
@@ -28,7 +28,7 @@ export class Footer extends LitElement {
   @queryAssignedElements({ slot: 'actions' })
   _actions?: Array<HTMLDivElement>;
 
-  static get styles(): CSSResult | CSSResult[] {
+  static get styles(): CSSResultGroup {
     return unsafeCSS(styles);
   }
 
