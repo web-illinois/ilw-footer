@@ -1,9 +1,9 @@
-import { CSSResult, LitElement, html, unsafeCSS } from "lit";
+import { CSSResult, LitElement, PropertyValues, html, unsafeCSS } from "lit";
 // @ts-ignore
 import styles from './ilw-footer.styles.css?inline';
 import './ilw-footer.css';
 import { default as wordmark } from "./wordmark.svg"
-import { property } from "lit/decorators.js";
+import { property, queryAssignedElements } from "lit/decorators.js";
 import { CampusFooterData, CampusFooterSection, CampusLink } from "./models/campus-footer-data";
 
 export class Footer extends LitElement {
@@ -24,6 +24,9 @@ export class Footer extends LitElement {
     attribute: false,
   })
   _utm?: string
+
+  @queryAssignedElements({ slot: 'actions' })
+  _actions?: Array<HTMLDivElement>;
 
   static get styles(): CSSResult | CSSResult[] {
     return unsafeCSS(styles);
@@ -130,9 +133,31 @@ export class Footer extends LitElement {
       `
   }
 
+  protected firstUpdated(_changedProperties: PropertyValues): void {
+    const actions = this._actions;
+    console.debug({ actions });
+    if (this._actions === null || this._actions === undefined || this._actions.length <= 0) {
+      console.debug('actions is empty. redefine grid');
+      this.redefineGridLayout();
+      return;
+    }
+
+    const slot = this._actions[0] as HTMLDivElement;
+    console.debug({ slot });
+
+    if (slot.children.length <= 0) {
+      console.debug('no actions. redefine grid');
+      this.redefineGridLayout();
+    }
+  }
+
   private generateUtm(): string {
     const utm = `utm_source=${this.source}&utm_medium=web&utm_campaign=Footer`;
     return utm;
+  }
+
+  private redefineGridLayout(): void {
+    console.debug('redefining grid layout');
   }
 }
 
