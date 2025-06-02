@@ -141,19 +141,13 @@ export class Footer extends LitElement {
   }
 
   protected firstUpdated(_changedProperties: PropertyValues): void {
-    const actions = this._actions;
-    console.debug({ actions });
     if (this._actions === null || this._actions === undefined || this._actions.length <= 0) {
-      console.debug('actions is empty. redefine grid');
       this.redefineGridLayout();
       return;
     }
 
     const slot = this._actions[0] as HTMLDivElement;
-    console.debug({ slot });
-
     if (slot.children.length <= 0) {
-      console.debug('no actions. redefine grid');
       this.redefineGridLayout();
     }
   }
@@ -164,7 +158,6 @@ export class Footer extends LitElement {
   }
 
   private redefineGridLayout(): void {
-    console.debug('redefining grid layout');
     this._sectionClasses["section-grid--no-action"] = true;
   }
 }
