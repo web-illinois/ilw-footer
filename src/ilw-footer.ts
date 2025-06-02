@@ -33,7 +33,7 @@ export class Footer extends LitElement {
   @property({
     attribute: false
   })
-  _sectionClasses = { 'section-grid': true, 'section-grid--no-action': false }
+  _sectionClasses = { 'section-grid--no-action': false }
 
   static get styles(): CSSResultGroup {
     return unsafeCSS(styles);
@@ -104,7 +104,7 @@ export class Footer extends LitElement {
     // site name, social media icons, address, phone, email,  primary unit.
     return html`
         <div class="site section-container">
-          <div class="site section ${classMap(this._sectionClasses)}">
+          <div class="site section section-grid ${classMap(this._sectionClasses)}">
             <div class="site-name">
               <slot name="site-name"></slot>
             </div>
@@ -141,24 +141,14 @@ export class Footer extends LitElement {
   }
 
   protected firstUpdated(_changedProperties: PropertyValues): void {
-    if (this._actions === null || this._actions === undefined || this._actions.length <= 0) {
-      this.redefineGridLayout();
-      return;
-    }
-
-    const slot = this._actions[0] as HTMLDivElement;
-    if (slot.children.length <= 0) {
-      this.redefineGridLayout();
+    if (this._actions === undefined || this._actions.length <= 0 || this._actions[0].children.length <= 0) {
+      this._sectionClasses["section-grid--no-action"];
     }
   }
 
   private generateUtm(): string {
     const utm = `utm_source=${this.source}&utm_medium=web&utm_campaign=Footer`;
     return utm;
-  }
-
-  private redefineGridLayout(): void {
-    this._sectionClasses["section-grid--no-action"] = true;
   }
 }
 
