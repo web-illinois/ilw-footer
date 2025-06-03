@@ -197,7 +197,10 @@
     /* bump content to top row if no actions slotted */
     .section-grid--no-action {
         & .content {
-            grid-area: 1 / 2 / 3 / 4;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            grid-column-start: 2;
+            grid-column-end: 2;
         }
     }
 
