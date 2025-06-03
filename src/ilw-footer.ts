@@ -142,7 +142,8 @@ export class Footer extends LitElement {
 
   protected firstUpdated(_changedProperties: PropertyValues): void {
     if (this._actions === undefined || this._actions.length <= 0 || this._actions[0].children.length <= 0) {
-      this._sectionClasses["section-grid--no-action"];
+      console.debug('switching section classes')
+      this._sectionClasses["section-grid--no-action"] = true;
     }
   }
 
