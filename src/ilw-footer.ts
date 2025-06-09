@@ -1,10 +1,12 @@
-import { CSSResult, LitElement, html, unsafeCSS } from "lit";
+import { CSSResult, CSSResultGroup, LitElement, PropertyValues, css, html, unsafeCSS } from "lit";
 // @ts-ignore
 import styles from './ilw-footer.styles.css?inline';
 import './ilw-footer.css';
 import { default as wordmark } from "./wordmark.svg"
-import { property } from "lit/decorators.js";
+import { property, queryAssignedElements } from "lit/decorators.js";
 import { CampusFooterData, CampusFooterSection, CampusLink } from "./models/campus-footer-data";
+import { classMap } from 'lit/directives/class-map.js';
+import { styleMap } from 'lit/directives/style-map.js';
 
 export class Footer extends LitElement {
   private readonly _defaultSource = 'Illinois_App';
@@ -25,7 +27,15 @@ export class Footer extends LitElement {
   })
   _utm?: string
 
-  static get styles(): CSSResult | CSSResult[] {
+  @queryAssignedElements({ slot: 'actions' })
+  _actions?: Array<HTMLDivElement>;
+
+  @property({
+    attribute: false
+  })
+  _sectionClasses = { 'section-grid--no-action': false }
+
+  static get styles(): CSSResultGroup {
     return unsafeCSS(styles);
   }
 
@@ -94,7 +104,7 @@ export class Footer extends LitElement {
     // site name, social media icons, address, phone, email,  primary unit.
     return html`
         <div class="site section-container">
-          <div class="site section">
+          <div class="site section section-grid ${classMap(this._sectionClasses)}">
             <div class="site-name">
               <slot name="site-name"></slot>
             </div>
@@ -128,6 +138,13 @@ export class Footer extends LitElement {
           ${this.renderLegalFooter()}
         </footer>
       `
+  }
+
+  protected firstUpdated(_changedProperties: PropertyValues): void {
+    if (this._actions === undefined || this._actions.length <= 0 || this._actions[0].children.length <= 0) {
+      console.debug('switching section classes')
+      this._sectionClasses["section-grid--no-action"] = true;
+    }
   }
 
   private generateUtm(): string {

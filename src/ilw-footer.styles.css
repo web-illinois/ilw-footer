@@ -33,21 +33,35 @@
     margin: 0 var(--ilw-margin--side, 0);
 }
 
-.site.section {
+.section-grid {
     display: grid;
     grid-template-columns: auto;
     grid-auto-rows: auto auto auto auto;
-    grid-template-areas: "site-name" "address" "actions" "content";
+    grid-template-areas: "site-name" "contact" "actions" "content";
     grid-gap: 27px;
 }
 
-.site.section .site-name {
+.section-grid--no-action {
+    /* bump content to top row if no actions slotted */
+    grid-auto-rows: auto auto auto;
+    grid-template-areas: "site-name" "contact" "content";
+}
+
+.section-grid .contact {
+    grid-area: contact;
+}
+
+.section-grid .site-name {
     grid-area: site-name;
 }
 
-.site.section .actions {
+.section-grid .actions {
     grid-area: actions;
     justify-self: start;
+}
+
+.section-grid .content {
+    grid-area: content;
 }
 
 .campus.section-container {
@@ -77,7 +91,7 @@
 }
 
 .campus .logo a:hover {
-outline: 2px dotted;    
+    outline: 2px dotted;
 }
 
 .campus svg .illinois {
@@ -131,7 +145,7 @@ outline: 2px dotted;
     fill: var(--ilw-link--focus-color);
     background-color: var(--ilw-link--focus-background-color);
     outline: var(--ilw-link--focus-outline);
-    color: var(--il-blue)
+    color: var(--il-blue);
 }
 
 .legal.section-container {
@@ -174,14 +188,26 @@ outline: 2px dotted;
 }
 
 @container (min-width: 960px) {
-    .site.section {
+    .section-grid {
         grid-template-columns: 1fr 2fr;
         grid-auto-rows: auto auto;
-        grid-template-areas: "site-name actions" "address content";
+        grid-template-areas: "site-name actions" "contact content";
     }
-    .site.section .actions {
+
+    /* bump content to top row if no actions slotted */
+    .section-grid--no-action {
+        & .content {
+            grid-row-start: 1;
+            grid-row-end: 4;
+            grid-column-start: 2;
+            grid-column-end: 2;
+        }
+    }
+
+    .section-grid .actions {
         justify-self: end;
     }
+
     .campus .sections {
         grid-template-columns: 1fr 1fr 1fr;
     }
