@@ -12,21 +12,6 @@ The footer component defines an area at the bottom of the page which should cont
 
 ## Customizations and Notes
 
-### Structured additions: Social media
-
-Social media section: The following sites’ URLs will be recognized and automatically replaced with the correct icon when contained in a Social Media div. (See the code examples for more details.)
-
-- Facebook
-- Instagram
-- LinkedIn
-- Pinterest
-- Snapchat
-- Twitter
-- Weibo
-- WhatsApp
-- X
-- YouTube
-
 ### Columns or freeform space
 
 You can choose between a multi-column layout or a freeform space in the right two-thirds of the footer.
@@ -57,7 +42,10 @@ The footer contains slots for site name (`site-name`), primary unit (`primary-un
 
 ### Social Media
 
-The social media slot (`social`) should be used for social media links. Site icons will be added automatically for supported sites.
+The social media slot (`social`) should be used for social media links. Icons for supported sites may be added using the `data-service` attribute.
+
+Social media icons are drawn from the official campus icon set (<https://cdn.brand.illinois.edu/icons.html>).
+Icons for unsupported sites may be added by targeting the `social` slot adding the necessary inline style rules to the unsupported link.
 
 ```html
 <ilw-footer>
@@ -83,6 +71,7 @@ The social media slot (`social`) should be used for social media links. Site ico
         <li><a data-service="x" href="http://example.com/">X</a></li>
         <li><a data-service="yelp" href="http://example.com/">Yelp</a></li>
         <li><a data-service="youtube" href="http://example.com/">YouTube</a></li>
+        <li><a href="#" style="--ilw-footer-social-icon: url('blue.svg'); --ilw-footer-social-icon-hover: url('orange.svg');">Custom Site</a></li>  
       </ul>
     </nav>
 </ilw-footer>
