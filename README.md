@@ -12,7 +12,7 @@ The footer component defines an area at the bottom of the page which should cont
 
 ## Customizations and Notes
 
-### Structured additions: Social media, University footer links
+### Structured additions: Social media
 
 Social media section: The following sites’ URLs will be recognized and automatically replaced with the correct icon when contained in a Social Media div. (See the code examples for more details.)
 
@@ -26,13 +26,6 @@ Social media section: The following sites’ URLs will be recognized and automat
 - WhatsApp
 - X
 - YouTube
-
-University standard footer elements: The following tags will automatically populate with the University-wide link for these items.
-
-- Cookies management (necessary for GDPR compliance)
-- Privacy statement
-- Copyright statement
-- Accessibility statement
 
 ### Columns or freeform space
 
@@ -168,6 +161,23 @@ To add a cookie button, use the cookies button slot (`cookies-button`) and inclu
 <ilw-footer>
 <p slot="site-name"><a href="/">Site Name</a></p>
 <button slot="cookies-button" id="ot-sdk-btn" class="ot-sdk-show-settings">About Cookies</button>
+</ilw-footer>
+```
+
+### Legal Links
+
+The following tags will automatically populate with the University-wide link for these items.
+
+- Privacy statement
+- Copyright statement
+- Accessibility statement
+
+Additional legal links may be added by targeting the `legal-link` slot.
+
+```html
+<ilw-footer>
+  <a href="#" slot="legal-link">Link 1</a>
+  <a href="#" slot="legal-link">Link 2</a>
 </ilw-footer>
 ```
 
