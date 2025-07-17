@@ -298,7 +298,7 @@ ilw-footer {
             margin-left: 0.5rem;
             padding: 0.5em 1em;
             border-radius: 0.2em;
-            font: 600 1.25em/1 var(--il-font-sans);
+            font: 700 1.25em/1 var(--il-font-sans);
             cursor: pointer;
         }
 
