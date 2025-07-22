@@ -23,30 +23,7 @@ test.describe('Accessibility Scan', () => {
         const scanner = new AxeBuilder({ page })
             .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']);
 
-        const results = await scanner.include({ fromShadowDom: ['footer'] }).analyze();
-        console.debug({ results });
-
-        // const scanner = new AxeBuilder({ page })
-        //     .options({
-        //         tags: [
-        //             'wcag2a',
-        //             'wcag2aa',
-        //             'wcag21a',
-        //             'wcag21aa'
-        //         ],
-        //         include: {
-        //             fromShadowDom: ['.footer']
-        //         },
-        //         rules: {
-        //             'color-contrast': { enabled: true }
-        //         }
-        //     });
-
-
-        // const results = await scanner.analyze();
-        // const contrast = results.passes.find(item => item.id === 'color-contrast');
-        // const items = contrast.nodes;
-        // console.debug({ items })
+        const results = await scanner.include('ilw-footer').analyze();
         const violations = results.violations;
 
         expect(violations).toEqual([]);
