@@ -136,6 +136,8 @@ Up to three columns can be defined in the right two-thirds of the footer.
 
 To add a cookie button, use the cookies button slot (`cookies-button`) and include the OneTrust cookies consent script in the page header.
 
+For consistency and future compatibility, the `.ilw-button` class should be added to the button or link element.
+
 ```html
 <head>
     <!-- OneTrust Cookies Consent Notice start for illinois.edu -->
@@ -151,7 +153,7 @@ To add a cookie button, use the cookies button slot (`cookies-button`) and inclu
 
 <ilw-footer>
 <p slot="site-name"><a href="/">Site Name</a></p>
-<button slot="cookies-button" id="ot-sdk-btn" class="ot-sdk-show-settings">About Cookies</button>
+<button slot="cookies-button" id="ot-sdk-btn" class="ot-sdk-show-settings ilw-button">About Cookies</button>
 </ilw-footer>
 ```
 

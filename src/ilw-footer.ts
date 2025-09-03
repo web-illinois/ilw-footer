@@ -6,7 +6,6 @@ import { default as wordmark } from "./wordmark.svg"
 import { property, queryAssignedElements } from "lit/decorators.js";
 import { CampusFooterData, CampusFooterSection, CampusLink } from "./models/campus-footer-data";
 import { classMap } from 'lit/directives/class-map.js';
-import { styleMap } from 'lit/directives/style-map.js';
 
 export class Footer extends LitElement {
   private readonly _defaultSource = 'Illinois_App';
