@@ -289,7 +289,8 @@ ilw-footer {
     }
 
     *[slot="actions"] {
-        a {
+        a,
+        button {
             all: initial;
             display: inline-block;
             background-color: var(--il-orange);
@@ -298,17 +299,43 @@ ilw-footer {
             margin-left: 0.5rem;
             padding: 0.5em 1em;
             border-radius: 0.2em;
+            border: 2px solid white;
             font: 700 1.25em/1 var(--il-font-sans);
             cursor: pointer;
+
+            &:visited {
+                outline: 0;
+                background-color: var(--il-orange);
+                color: white;
+                border: white;
+            }
+
+            &:hover {
+                outline: 0;
+                background-color: white;
+                color: var(--il-orange);
+                border-color: var(--il-orange);
+                text-decoration: underline;
+            }
+
+            &:focus {
+                background-color: var(--ilw-link--focus-background-color);
+                color: var(--ilw-link--focus-color);
+                border-color: var(--ilw-link--focus-color);
+                text-decoration: underline;
+                outline: var(--ilw-link--focus-outline);
+            }
+
+            &:active {
+                background-color: var(--il-blue);
+                color: white;
+                border-color: var(--il-orange);
+                outline: solid var(--il-orange) 2px;
+            }
         }
 
         a:first-child {
             margin-left: 0;
-        }
-
-        a:hover,
-        a:focus {
-            background-color: var(--il-blue);
         }
     }
 
@@ -388,6 +415,7 @@ ilw-footer {
             text-decoration: underline;
             outline: var(--ilw-link--focus-outline);
         }
+
         &:active {
             background-color: var(--ilw-button--active-background-color);
             color: var(--ilw-button--active-color);
