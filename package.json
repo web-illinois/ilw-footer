@@ -33,6 +33,8 @@
         "preview": "vite preview",
         "prepack": "npm run build",
         "test": "playwright test",
+        "test:axe": "playwright test",
+        "test:axe:github": "playwright test --config playwright.ci.config.ts",
         "test-dev": "vite --port 5174"
     },
     "dependencies": {
@@ -40,9 +42,13 @@
     },
     "devDependencies": {
         "@axe-core/playwright": "^4.10.2",
-        "@playwright/test": "^1.50.1",
-        "prettier": "^3.5.1",
-        "typescript": "^5.7.3",
+        "@illinois-toolkit/ilw-core": "^1.0.2",
+        "@playwright/test": "^1.55.0",
+        "@types/node": "^24.5.0",
+        "axe-html-reporter": "^2.2.11",
+        "playwright": "^1.55.0",
+        "prettier": "^3.6.2",
+        "typescript": "^5.9.2",
         "vite": "^7.1.5",
         "vite-plugin-dts": "^4.5.4"
     }
