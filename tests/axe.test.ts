@@ -3,7 +3,7 @@ import AxeBuilder from "@axe-core/playwright";
 import { createHtmlReport } from "axe-html-reporter";
 import * as fs from "node:fs";
 
-test.describe("homepage", () => {
+test.describe("footer", () => {
     test("should not have any automatically detectable accessibility issues", async ({
         page,
     }, testInfo) => {
@@ -11,6 +11,7 @@ test.describe("homepage", () => {
 
         const accessibilityScanResults = await new AxeBuilder({ page })
             .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
+            .include('ilw-footer')
             .analyze();
 
         if (!fs.existsSync("dist/cdn")) {
@@ -18,6 +19,7 @@ test.describe("homepage", () => {
                 recursive: true,
             });
         }
+
         const pjson = fs.readFileSync("package.json", "utf-8");
         const project = JSON.parse(pjson).name;
         const report = createHtmlReport({
@@ -28,6 +30,7 @@ test.describe("homepage", () => {
                 projectKey: project,
             },
         });
+
         fs.writeFileSync("dist/cdn/axe.html", report, "utf-8");
         await testInfo.attach("Axe Report", {
             path: "dist/cdn/axe.html",

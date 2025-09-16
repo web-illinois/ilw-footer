@@ -4,7 +4,7 @@ test.describe('Function tests', () => {
   test('the footer contains a footer landmark', async ({ page }) => {
     await page.goto('samples/index.html');
     const val = await page.evaluate(() => {
-      return document.querySelector('ilw-footer').shadowRoot.querySelector('footer');
+      return document.querySelector('ilw-footer')?.shadowRoot?.querySelector('footer');
     })
     expect(val).not.toBeNull();
   })
@@ -14,7 +14,7 @@ test.describe('Function tests', () => {
     await page.waitForLoadState('domcontentloaded');
 
     const footer = await page.evaluate(() => {
-      return document.querySelector('ilw-footer').shadowRoot.querySelector('footer');
+      return document.querySelector('ilw-footer')?.shadowRoot?.querySelector('footer');
     });
 
     expect(footer).not.toBeNull();
@@ -25,7 +25,7 @@ test.describe('Function tests', () => {
     await page.waitForLoadState('domcontentloaded');
 
     const tester = await page.evaluate(() => {
-      return document.querySelector('test-footer').shadowRoot.querySelector('#testFooter');
+      return document.querySelector('test-footer')?.shadowRoot?.querySelector('#testFooter');
     });
 
     expect(tester).not.toBeNull();

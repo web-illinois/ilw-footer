@@ -5,7 +5,7 @@ import { defineConfig, devices } from '@playwright/test';
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-    testDir: './test-axe',
+    testDir: './tests',
     testMatch: /.*\.test|spec\.([tj])s$/,
     reporter: 'html',
     projects: [
