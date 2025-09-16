@@ -15,9 +15,8 @@ export default defineConfig({
         rollupOptions: {
             external: [/^@?lit/],
             output: {
-                assetFileNames: (chunkInfo) => {
-                    if (chunkInfo.name === "style.css") return "ilw-footer.css";
-                    return "assets/[name]-[hash][extname]"; // vite default
+                assetFileNames: () => {
+                    return "[name][extname]";
                 },
             },
         },
