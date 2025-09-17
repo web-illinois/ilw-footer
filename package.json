@@ -32,7 +32,8 @@
         "build": "vite build --config vite.transpile.config.ts --emptyOutDir && vite build --config vite.build.config.ts --emptyOutDir",
         "preview": "vite preview",
         "prepack": "npm run build",
-        "test": "playwright test",
+        "test": "vitest run --browser.headless",
+        "test: browser": "vitest browser --browser chromium",
         "test:axe": "playwright test",
         "test:axe:github": "playwright test --config playwright.ci.config.ts",
         "test-dev": "vite --port 5174"
@@ -45,11 +46,13 @@
         "@illinois-toolkit/ilw-core": "^1.0.2",
         "@playwright/test": "^1.55.0",
         "@types/node": "^24.5.0",
+        "@vitest/browser": "^3.2.4",
         "axe-html-reporter": "^2.2.11",
         "playwright": "^1.55.0",
         "prettier": "^3.6.2",
         "typescript": "^5.9.2",
         "vite": "^7.1.5",
-        "vite-plugin-dts": "^4.5.4"
+        "vite-plugin-dts": "^4.5.4",
+        "vitest-browser-lit": "^0.1.0"
     }
 }
