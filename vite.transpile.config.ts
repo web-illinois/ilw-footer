@@ -13,7 +13,7 @@ export default defineConfig({
             formats: ["es"],
         },
         rollupOptions: {
-            external: [/^@?lit/],
+            external: [/^@?lit/, /^@illinois-toolkit/],
             output: {
                 assetFileNames: () => {
                     return "[name][extname]";
