@@ -92,8 +92,8 @@ export class Footer extends LitElement {
             <div class="cookies-button-and-links">
               <slot name="cookies-button"></slot>
               <a href="https://www.vpaa.uillinois.edu/resources/web_privacy?${this._utm}">Privacy</a></li>
-              <a href="https://illinois.edu/resources/website/copyright.html?${this._utm}">Copyright</a></li>
-              <a href="https://illinois.edu/resources/website/accessibility.html?${this._utm}">Accessibility</a></li>
+              <a href="https://illinois.edu/copyright/?${this._utm}">Copyright</a></li>
+              <a href="https://illinois.edu/about/accessibility/?${this._utm}">Accessibility</a></li>
               <slot name="legal-link"></slot>
             </div>
           </div>
