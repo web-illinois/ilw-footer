@@ -10,6 +10,24 @@ The standard campus footer should appear at the bottom of every page of a campus
 
 The footer component defines an area at the bottom of the page which should contain (at a minimum) the site’s contact information and University-wide footer links. Additional features like social media icons, extra site navigation, and special highlighted content can be added either in columns or in a two-thirds-wide freeform area.
 
+## Properties
+
+| Property | Description                                                                 |
+|----------|-----------------------------------------------------------------------------|
+| `source` | Custom utm tracking code for campus links. Applied to the `ilw-footer` tag. |
+
+## Slots
+
+| Slot                    | Description                                                      |
+|-------------------------|------------------------------------------------------------------|
+| `slot="primary-unit"`   | Assigns unit name to left column.                                |
+| `slot="site-name"`      | Assigns site name to left column.                                |
+| `slot="address"`        | Assigns address to left column.                                  |
+| `slot="social"`         | Assigns social media links to left column.                       |
+| `slot="actions"`        | Assigns call to action links to right column.                    |
+| `slot="cookies-button"` | Includes cookie banner and button in lower edge.                 |
+| `slot="legal-link"`     | Adds additional links to legal and policy section in lower edge. |
+
 ## Customizations and Notes
 
 ### Columns or freeform space
