@@ -134,19 +134,19 @@ Up to three columns can be defined in the right two-thirds of the footer.
 
 ### Cookie Button
 
-To add a cookie button, use the cookies button slot (`cookies-button`) and include the OneTrust cookies consent script in the page header.
+To add a cookie button, use the cookies button slot (`cookies-button`) and include the cookies consent script in the page header.
 
 For consistency and future compatibility, the `.ilw-button` class should be added to the button or link element.
 
 ```html
 <head>
-    <!-- OneTrust Cookies Consent Notice start for illinois.edu -->
-    <script src="https://onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js" id="onetrust-js"
-    data-domain-script="26be7d61-2017-4ea7-8a8b-8f1704889763"></script>
+    <!-- Illinois Cookies Consent Notice start for illinois.edu -->
+    <script src="https://onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js" id="cookie-js"
+    data-domain-script="uiuc"></script>
     <script>
     function OptanonWrapper() { }
     </script>
-    <!-- OneTrust Cookies Consent Notice end for illinois.edu -->
+    <!-- Illinois Cookies Consent Notice end for illinois.edu -->
 </head>
 
 <!-- items removed for clarity -->
