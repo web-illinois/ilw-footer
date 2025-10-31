@@ -91,10 +91,10 @@ export class Footer extends LitElement {
           <div class="legal section">
             <div class="cookies-button-and-links">
               <slot name="cookies-button"></slot>
+              <slot name="legal-link"></slot>
               <a href="https://www.vpaa.uillinois.edu/resources/web_privacy?${this._utm}">Privacy</a>
               <a href="https://illinois.edu/copyright/?${this._utm}">Copyright</a>
               <a href="https://illinois.edu/about/accessibility/?${this._utm}">Accessibility</a>
-              <slot name="legal-link"></slot>
             </div>
           </div>
         </div>`;
