@@ -1,4 +1,4 @@
-import { CSSResult, CSSResultGroup, LitElement, PropertyValues, css, html, unsafeCSS } from "lit";
+import { CSSResultGroup, LitElement, PropertyValues, css, html, unsafeCSS } from "lit";
 // @ts-ignore
 import styles from './ilw-footer.styles.css?inline';
 import './ilw-footer.css';
