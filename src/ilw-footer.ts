@@ -93,7 +93,9 @@ export class Footer extends LitElement {
         <div class="legal section-container">
           <div class="legal section">
             <div class="cookies-button-and-links">
-              <slot name="cookies-button"></slot>
+              <slot name="cookies-button">
+                <button slot="cookies-button" id="ot-sdk-btn" class="ot-sdk-show-settings ilw-button wigg-test">About Cookies</button>
+              </slot>
               <a href="https://www.vpaa.uillinois.edu/resources/web_privacy?${this._utm}">Privacy</a>
               <a href="https://illinois.edu/copyright/?${this._utm}">Copyright</a>
               <slot name="legal-link"></slot>
@@ -145,13 +147,34 @@ export class Footer extends LitElement {
 
   protected firstUpdated(_changedProperties: PropertyValues): void {
     if (this._actions === undefined || this._actions.length <= 0 || this._actions[0].children.length <= 0) {
-      console.debug('switching section classes')
       this._sectionClasses["section-grid--no-action"] = true;
     }
 
-    if (this._cookiesButton === undefined || this._cookiesButton.length === 0 || length <= 0) {
+    if (this._cookiesButton === undefined || this._cookiesButton.length === 0) {
       console.warn('No cookie banner found. Assigning standard Illinois cookie banner.')
+      this.generateCookieBanner();
     }
+  }
+
+  private generateCookieBanner(): void {
+    console.debug('loading script');
+    const wrapper = document.createElement('script');
+    wrapper.innerText = 'function OptanonWrapper() {}';
+    this.shadowRoot?.appendChild(wrapper);
+
+    const script = document.createElement('script');
+    script.src = 'https://onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js';
+    script.id = 'cookie-js';
+    script.setAttribute('data-domain-script', 'uiuc');
+
+    script.onload = () => {
+      console.debug('debugging script attachment');
+      const element = document.getElementById('ot-sdk-btn');
+      const shadowElement = this.shadowRoot?.getElementById('ot-sdk-btn');
+      console.debug({element}, {shadowElement});
+    }
+
+    this.shadowRoot?.appendChild(script);
   }
 
   private generateUtm(): string {
