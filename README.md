@@ -25,7 +25,7 @@ The footer component defines an area at the bottom of the page which should cont
 | `slot="address"`        | Assigns address to left column.                                  |
 | `slot="social"`         | Assigns social media links to left column.                       |
 | `slot="actions"`        | Assigns call to action links to right column.                    |
-| `slot="cookies-button"` | Includes cookie banner and button in lower edge.                 |
+| `slot="cookies-button"` | **DEPRECATED** Includes cookie banner and button in lower edge.  |
 | `slot="legal-link"`     | Adds additional links to legal and policy section in lower edge. |
 
 ## Customizations and Notes
@@ -151,6 +151,8 @@ Up to three columns can be defined in the right two-thirds of the footer.
 ```
 
 ### Cookie Button
+
+**Deprecated:** The Illinois cookie button and script are now included by default. During the deprecation period, existing cookie buttons will be honored. The Illinois cookie button will be added only if no content has been added to the `cookies-button` slot.
 
 To add a cookie button, use the cookies button slot (`cookies-button`) and include the cookies consent script in the page header.
 
