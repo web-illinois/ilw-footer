@@ -93,9 +93,7 @@ export class Footer extends LitElement {
         <div class="legal section-container">
           <div class="legal section">
             <div class="cookies-button-and-links">
-              <slot name="cookies-button">
-                <button slot="cookies-button" id="ot-sdk-btn" class="ot-sdk-show-settings ilw-button wigg-test">About Cookies</button>
-              </slot>
+              <slot name="cookies-button"></slot>
               <a href="https://www.vpaa.uillinois.edu/resources/web_privacy?${this._utm}">Privacy</a>
               <a href="https://illinois.edu/copyright/?${this._utm}">Copyright</a>
               <slot name="legal-link"></slot>
@@ -157,24 +155,28 @@ export class Footer extends LitElement {
   }
 
   private generateCookieBanner(): void {
-    console.debug('loading script');
+    const button = document.createElement('button');
+    button.id = 'ot-sdk-btn';
+    button.classList.add('ot-sdk-show-settings', 'ilw-button');
+    button.setAttribute('slot', 'cookies-button');
+    button.innerText = 'About Cookies';
+    const footer = document.getElementsByTagName('ilw-footer');
+    if (!footer) {
+      console.error('footer component not found');
+      return;
+    }
+    footer[0].appendChild(button);
+
     const wrapper = document.createElement('script');
     wrapper.innerText = 'function OptanonWrapper() {}';
-    this.shadowRoot?.appendChild(wrapper);
+    document.head.appendChild(wrapper);
 
     const script = document.createElement('script');
     script.src = 'https://onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js';
     script.id = 'cookie-js';
     script.setAttribute('data-domain-script', 'uiuc');
 
-    script.onload = () => {
-      console.debug('debugging script attachment');
-      const element = document.getElementById('ot-sdk-btn');
-      const shadowElement = this.shadowRoot?.getElementById('ot-sdk-btn');
-      console.debug({element}, {shadowElement});
-    }
-
-    this.shadowRoot?.appendChild(script);
+    document.head.appendChild(script);
   }
 
   private generateUtm(): string {
