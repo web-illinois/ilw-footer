@@ -8,6 +8,9 @@ import { CampusFooterData, CampusFooterSection, CampusLink } from "./models/camp
 import { classMap } from 'lit/directives/class-map.js';
 
 export class Footer extends LitElement {
+  // override tag name in inherited classes to ensure proper document queries.
+  protected TagName = 'ilw-footer'
+
   private readonly _defaultSource = 'Illinois_App';
 
   @property({
@@ -160,7 +163,7 @@ export class Footer extends LitElement {
     button.classList.add('ot-sdk-show-settings', 'ilw-button');
     button.setAttribute('slot', 'cookies-button');
     button.innerText = 'About Cookies';
-    const footer = document.getElementsByTagName('ilw-footer');
+    const footer = document.getElementsByTagName(this.TagName);
     if (!footer) {
       console.error('footer component not found');
       return;
