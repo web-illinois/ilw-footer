@@ -30,7 +30,7 @@ export class Footer extends LitElement {
   _utm?: string
 
   @queryAssignedElements({ slot: 'actions' })
-  _actions?: Array<HTMLDivElement>;
+  _actions?: Array<HTMLElement>;
 
   @queryAssignedElements({ slot: 'cookies-button' })
   _cookiesButton?: Array<HTMLElement>
@@ -150,6 +150,9 @@ export class Footer extends LitElement {
     if (this._actions === undefined || this._actions.length <= 0 || this._actions[0].children.length <= 0) {
       this._sectionClasses["section-grid--no-action"] = true;
     }
+
+    const actions = this._actions;
+    console.debug({ actions })
 
     if (this._cookiesButton === undefined || this._cookiesButton.length === 0) {
       console.warn('No cookie banner found. Assigning standard Illinois cookie banner.')
