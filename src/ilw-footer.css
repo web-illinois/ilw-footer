@@ -288,55 +288,58 @@ ilw-footer {
         }
     }
 
-    *[slot="actions"] {
-        a,
-        button {
-            all: initial;
-            display: inline-block;
+    a[slot="actions"],
+    button[slot="actions"],
+    *[slot="actions"] a,
+    *[slot="actions"] button {
+        all: initial;
+        display: inline-block;
+        background-color: var(--il-orange);
+        color: white;
+        margin-top: 0;
+        margin-left: 0.5rem;
+        padding: 0.5em 1em;
+        border-radius: 0.2em;
+        border: 2px solid white;
+        font: 700 1.25em/1 var(--il-font-sans);
+        cursor: pointer;
+
+        &:visited {
+            outline: 0;
             background-color: var(--il-orange);
             color: white;
-            margin-top: 0;
-            margin-left: 0.5rem;
-            padding: 0.5em 1em;
-            border-radius: 0.2em;
-            border: 2px solid white;
-            font: 700 1.25em/1 var(--il-font-sans);
-            cursor: pointer;
-
-            &:visited {
-                outline: 0;
-                background-color: var(--il-orange);
-                color: white;
-                border: white;
-            }
-
-            &:hover {
-                outline: 0;
-                background-color: white;
-                color: var(--il-orange);
-                border-color: var(--il-orange);
-                text-decoration: underline;
-            }
-
-            &:focus {
-                background-color: var(--ilw-link--focus-background-color);
-                color: var(--ilw-link--focus-color);
-                border-color: var(--ilw-link--focus-color);
-                text-decoration: underline;
-                outline: var(--ilw-link--focus-outline);
-            }
-
-            &:active {
-                background-color: var(--il-blue);
-                color: white;
-                border-color: var(--il-orange);
-                outline: solid var(--il-orange) 2px;
-            }
+            border: white;
         }
 
-        a:first-child {
-            margin-left: 0;
+        &:hover {
+            outline: 0;
+            background-color: white;
+            color: var(--il-orange);
+            border-color: var(--il-orange);
+            text-decoration: underline;
         }
+
+        &:focus {
+            background-color: var(--ilw-link--focus-background-color);
+            color: var(--ilw-link--focus-color);
+            border-color: var(--ilw-link--focus-color);
+            text-decoration: underline;
+            outline: var(--ilw-link--focus-outline);
+        }
+
+        &:active {
+            background-color: var(--il-blue);
+            color: white;
+            border-color: var(--il-orange);
+            outline: solid var(--il-orange) 2px;
+        }
+    }
+
+    a[slot="actions"]:first,
+    button[slot="actions"]:first,
+    *[slot="actions"] a:first-child,
+    *[slot="actions"] button:first-child {
+        margin-left: 0;
     }
 
     .ilw-footer-menu {
