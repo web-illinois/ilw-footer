@@ -405,7 +405,7 @@ ilw-footer {
         &:hover {
             outline: 0;
             background-color: white;
-            color: black;
+            color: var(--il-blue);
             text-decoration: underline;
         }
 
