@@ -147,12 +147,9 @@ export class Footer extends LitElement {
   }
 
   protected firstUpdated(_changedProperties: PropertyValues): void {
-    if (this._actions === undefined || this._actions.length <= 0 || this._actions[0].children.length <= 0) {
+    if (this._actions === undefined || this._actions.length <= 0) {
       this._sectionClasses["section-grid--no-action"] = true;
     }
-
-    const actions = this._actions;
-    console.debug({ actions })
 
     if (this._cookiesButton === undefined || this._cookiesButton.length === 0) {
       console.warn('No cookie banner found. Assigning standard Illinois cookie banner.')
