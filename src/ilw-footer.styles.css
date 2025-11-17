@@ -1,6 +1,8 @@
 /* Styleable variables are in the base layer so they can be overridden easily */
 @layer base {
     :host {
+        --ilw-footer--legal-section--divider: #1f3d7b;
+        --ilw-footer--cookie-button--background: #174686;
     }
 }
 
@@ -151,7 +153,7 @@
 .legal.section-container {
     background-color: var(--ilw-color--blue--background);
     color: var(--ilw-color--blue--text);
-    border-top: 0.5rem solid var(--il-industrial-darker-2);
+    border-top: 0.5rem solid var(--ilw-footer--legal-section--divider); /* --il-industrial-darker-2 */
 }
 
 .legal a {
@@ -216,7 +218,7 @@
     button[slot="cookies-button"],
     a[slot="cookies-button"],
     .ot-sdk-show-settings {
-        background-color: var(--il-industrial-darker-2);
+        background-color: var(--ilw-footer--cookie-button--background);
         color: var(--ilw-color--control-accent-text);
         border: 2px solid var(--ilw-color--control-accent-text);
         font: 700 1.188rem / 1.25rem var(--il-font-sans);

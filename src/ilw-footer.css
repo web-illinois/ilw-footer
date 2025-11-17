@@ -384,7 +384,7 @@ ilw-footer {
     /* Note duplicate rule in ilw-footer.styles.ts */
     button[slot="cookies-button"],
     a[slot="cookies-button"] {
-        background-color: var(--il-industrial-darker-2);
+        background-color: var(--ilw-footer--cookie-button--background);
         color: var(--ilw-color--control-accent-text);
         border: 2px solid var(--ilw-color--control-accent-text);
         font: 700 1.188rem / 1.25rem var(--il-font-sans);
