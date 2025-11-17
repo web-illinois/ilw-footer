@@ -15,9 +15,9 @@ ilw-footer {
     }
 
     a:focus {
-        color: var(--ilw-link--focus-color);
-        background-color: var(--ilw-link--focus-background-color);
-        outline: var(--ilw-link--focus-outline);
+        color: var(--ilw-color--focus--text);
+        background-color: var(--ilw-color--focus--background);
+        outline: var(--ilw-color--focus--outline);
         text-decoration-thickness: 0.1rem;
     }
 
@@ -35,7 +35,7 @@ ilw-footer {
     }
 
     address a:hover {
-        color: var(--il-altgeld);
+        color: var(--ilw-color--heading-link-hover);
     }
 
     /* Site name */
@@ -48,7 +48,7 @@ ilw-footer {
 
     a[slot="site-name"],
     *[slot="site-name"] a {
-        color: var(--il-blue);
+        color: var(--ilw-color--heading-link);
         cursor: pointer;
         text-decoration: none;
     }
@@ -62,9 +62,9 @@ ilw-footer {
 
     a[slot="site-name"]:focus,
     *[slot="site-name"] a:focus {
-        color: var(--ilw-link--focus-color);
-        background-color: var(--ilw-link--focus-background-color);
-        outline: var(--ilw-link--focus-outline);
+        color: var(--ilw-color--focus--text);
+        background-color: var(--ilw-color--focus--background);
+        outline: var(--ilw-color--focus--outline);
         text-decoration-thickness: 0.1rem;
     }
 
@@ -80,7 +80,7 @@ ilw-footer {
 
     a[slot="primary-unit"],
     *[slot="primary-unit"] a {
-        color: var(--il-blue);
+        color: var(--ilw-color--heading-link);
         cursor: pointer;
         text-decoration: none;
     }
@@ -94,9 +94,9 @@ ilw-footer {
 
     a[slot="primary-unit"]:focus,
     *[slot="primary-unit"] a:focus {
-        color: var(--ilw-link--focus-color);
-        background-color: var(--ilw-link--focus-background-color);
-        outline: var(--ilw-link--focus-outline);
+        color: var(--ilw-color--focus--text);
+        background-color: var(--ilw-color--focus--background);
+        outline: var(--ilw-color--focus--outline);
         text-decoration-thickness: 0.1rem;
     }
 
@@ -140,7 +140,7 @@ ilw-footer {
             all: initial;
             position: relative;
             display: none;
-            color: var(--il-blue);
+            color: var(--ilw-color--control-text);
             font: 700 1rem var(--il-font-sans);
             cursor: pointer;
             background-image: var(--ilw-footer-social-icon);
@@ -158,9 +158,9 @@ ilw-footer {
         }
 
         a:focus {
-            color: var(--ilw-link--focus-color);
-            background-color: var(--ilw-link--focus-background-color);
-            outline: var(--ilw-link--focus-outline);
+            color: var(--ilw-color--focus--text);
+            background-color: var(--ilw-color--focus--background);
+            outline: var(--ilw-color--focus--outline);
             outline-width: 0.2rem;
         }
 
@@ -294,44 +294,44 @@ ilw-footer {
     *[slot="actions"] button {
         all: initial;
         display: inline-block;
-        background-color: var(--il-orange);
-        color: white;
+        background-color: var(--ilw-color--control-accent);
+        color: var(--ilw-color--control-accent-text);
         margin-top: 0;
         margin-left: 0.5rem;
         padding: 0.5em 1em;
         border-radius: 0.2em;
-        border: 2px solid white;
+        border: 2px solid var(--ilw-color--control-accent-text);
         font: 700 1.25em/1 var(--il-font-sans);
         cursor: pointer;
 
         &:visited {
             outline: 0;
-            background-color: var(--il-orange);
-            color: white;
-            border: white;
+            background-color: var(--ilw-color--control-accent);
+            color: var(--ilw-color--control-accent-text);
+            border: var(--ilw-color--control-accent-text);
         }
 
         &:hover {
             outline: 0;
-            background-color: white;
-            color: var(--il-orange);
-            border-color: var(--il-orange);
+            background-color: var(--ilw-color--control-accent-text);
+            color: var(--ilw-color--control-accent);
+            border-color: var(--ilw-color--control-accent);
             text-decoration: underline;
         }
 
         &:focus {
-            background-color: var(--ilw-link--focus-background-color);
-            color: var(--ilw-link--focus-color);
-            border-color: var(--ilw-link--focus-color);
+            background-color: var(--ilw-color--focus--background);
+            color: var(--ilw-color--focus--text);
+            border-color: var(--ilw-color--focus--text);
             text-decoration: underline;
-            outline: var(--ilw-link--focus-outline);
+            outline: var(--ilw-color--focus--outline);
         }
 
         &:active {
-            background-color: var(--il-blue);
-            color: white;
-            border-color: var(--il-orange);
-            outline: solid var(--il-orange) 2px;
+            background-color: var(--ilw-color--control-text);
+            color: var(--ilw-color--control-accent-text);
+            border-color: var(--ilw-color--control-accent);
+            outline: solid var(--ilw-color--control-accent) 2px;
         }
     }
 
@@ -348,9 +348,9 @@ ilw-footer {
         h2 {
             all: initial;
             display: block;
-            color: var(--il-blue);
+            color: var(--ilw-color--heading);
             font: 700 20px/25px var(--il-font-sans);
-            border-bottom: 1px solid var(--il-blue);
+            border-bottom: 1px solid var(--ilw-color--heading);
         }
         ul {
             all: initial;
@@ -374,9 +374,9 @@ ilw-footer {
         }
 
         a:focus {
-            color: var(--ilw-link--focus-color);
-            background-color: var(--ilw-link--focus-background-color);
-            outline: var(--ilw-link--focus-outline);
+            color: var(--ilw-color--focus--text);
+            background-color: var(--ilw-color--focus--background);
+            outline: var(--ilw-color--focus--outline);
             text-decoration-thickness: 0.1rem;
         }
     }
@@ -385,8 +385,8 @@ ilw-footer {
     button[slot="cookies-button"],
     a[slot="cookies-button"] {
         background-color: var(--il-industrial-darker-2);
-        color: white;
-        border: 2px solid white;
+        color: var(--ilw-color--control-accent-text);
+        border: 2px solid var(--ilw-color--control-accent-text);
         font: 700 1.188rem / 1.25rem var(--il-font-sans);
         display: inline-block;
         margin: 6px 0;
@@ -400,31 +400,31 @@ ilw-footer {
 
         &:visited {
             outline: 0;
-            background-color: var(--ilw-button--background-color);
-            color: var(--ilw-button--foreground-color);
-            border: 2px solid var(--ilw-button--border-color);
+            background-color: var(--ilw-color--control);
+            color: var(--ilw-color--control-text);
+            border: 2px solid var(--ilw-color--control-text);
         }
 
         &:hover {
             outline: 0;
-            background-color: white;
-            color: var(--il-blue);
+            background-color: var(--ilw-color--control);
+            color: var(--ilw-color--control-text);
             text-decoration: underline;
         }
 
         &:focus {
-            background-color: var(--ilw-link--focus-background-color);
-            color: var(--ilw-link--focus-color);
-            border-color: var(--ilw-link--focus-color);
+            background-color: var(--ilw-color--focus--background);
+            color: var(--ilw-color--focus--text);
+            border-color: var(--ilw-color--focus--text);
             text-decoration: underline;
-            outline: var(--ilw-link--focus-outline);
+            outline: var(--ilw-color--focus--outline);
         }
 
         &:active {
-            background-color: var(--ilw-button--active-background-color);
-            color: var(--ilw-button--active-color);
-            border-color: var(--ilw-button--active-border-color);
-            outline: solid var(--ilw-button--active-border-color) 2px;
+            background-color: var(--ilw-color--control-accent);
+            color: var(--ilw-color--control-accent-text);
+            border-color: var(--ilw-color--control-text);
+            outline: solid var(--ilw-color--control-text) 2px;
         }
     }
 }
