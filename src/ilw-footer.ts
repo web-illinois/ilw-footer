@@ -84,7 +84,7 @@ export class Footer extends LitElement {
         <div class="campus section-container">
           <div class="campus section">
             <h2 class="logo">
-              <a href="https://illinois.edu/?${this._utm}">${wordmark}</a>
+              <a href="https://illinois.edu/?${this._utm}" aria-label="University of Illinois at Urbana-Champaign">${wordmark}</a>
             </h2>
             ${this.renderCampusSections()}
           </div>
