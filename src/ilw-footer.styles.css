@@ -110,6 +110,14 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem 1.25rem;
+    
+    @container (min-width: 650px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    @container (min-width: 1200px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .campus h3 {
@@ -206,10 +214,6 @@
 
     .section-grid .actions {
         justify-self: end;
-    }
-
-    .campus .sections {
-        grid-template-columns: 1fr 1fr 1fr;
     }
 
     /* Note duplicate rule in ilw-footer.css */
