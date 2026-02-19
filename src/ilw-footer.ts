@@ -7,7 +7,7 @@ import { property, queryAssignedElements } from "lit/decorators.js";
 import { CampusFooterData, CampusFooterSection, CampusLink } from "./models/campus-footer-data";
 import { classMap } from 'lit/directives/class-map.js';
 
-export class Footer extends LitElement {
+export default class Footer extends LitElement {
   // override tag name in inherited classes to ensure proper document queries.
   protected TagName = 'ilw-footer'
 
