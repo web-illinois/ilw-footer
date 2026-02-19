@@ -35,6 +35,9 @@ export class Footer extends LitElement {
   @queryAssignedElements({ slot: 'cookies-button' })
   _cookiesButton?: Array<HTMLElement>
 
+  @queryAssignedElements({ slot: 'social' })
+  _social?: Array<HTMLElement>
+
   @property({
     attribute: false
   })
