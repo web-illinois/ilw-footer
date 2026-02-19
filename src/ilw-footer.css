@@ -164,6 +164,7 @@ ilw-footer {
             outline-width: 0.2rem;
         }
 
+        /** social icon data-service deprecated */
         a[data-service="bluesky"],
         a[data-service="calendar"],
         a[data-service="facebook"],
@@ -286,6 +287,7 @@ ilw-footer {
             --ilw-footer-social-icon: url("https://cdn.brand.illinois.edu/icons/solid/blue/youtube.svg");
             --ilw-footer-social-icon-hover: url("https://cdn.brand.illinois.edu/icons/solid/orange/youtube.svg");
         }
+        /** social icon data-service deprecated */
     }
 
     a[slot="actions"],
