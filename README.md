@@ -204,6 +204,10 @@ Links in the campus footer section (those added and maintained as part of the ca
 </ilw-footer>
 ```
 
+## Deprecations
+
+**Cookies button slot:** The Illinois cookie button and script are now included by default. During the deprecation period, existing cookie buttons will be honored. Remove references to `slot="cookies-button"`.
+
 ## External References
 
 - [HTML Anchor element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
