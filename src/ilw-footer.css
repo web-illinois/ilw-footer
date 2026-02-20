@@ -139,22 +139,16 @@ ilw-footer {
         a {
             all: initial;
             position: relative;
-            display: none;
             color: var(--il-blue);
             font: 700 1rem var(--il-font-sans);
             cursor: pointer;
-            background-image: var(--ilw-footer-social-icon);
             width: max(22px, 2.75rem);
             height: max(22px, 2.75rem);
             overflow: hidden;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            text-indent: 33rem;
-        }
 
-        a:hover {
-            background-image: var(--ilw-footer-social-icon-hover);
+            &:hover {
+                color: var(--il-orange);
+            }
         }
 
         a:focus {
@@ -186,6 +180,15 @@ ilw-footer {
         a[data-service="yelp"],
         a[data-service="youtube"] {
             display: block;
+            background-image: var(--ilw-footer-social-icon);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            text-indent: 33rem;
+            
+            &:hover {
+                background-image: var(--ilw-footer-social-icon-hover);
+            }
         }
 
         a[data-service="bluesky"] {
