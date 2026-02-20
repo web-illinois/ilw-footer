@@ -142,8 +142,6 @@ ilw-footer {
             color: var(--il-blue);
             font: 700 1rem var(--il-font-sans);
             cursor: pointer;
-            width: max(22px, 2.75rem);
-            height: max(22px, 2.75rem);
             overflow: hidden;
 
             &:hover {
@@ -156,6 +154,7 @@ ilw-footer {
             background-color: var(--ilw-link--focus-background-color);
             outline: var(--ilw-link--focus-outline);
             outline-width: 0.2rem;
+            display: inline-block;
         }
 
         /** social icon data-service deprecated */
