@@ -77,7 +77,7 @@ is recommended.
         <li><a href="http://example.com/"><ilw-icon size="44px" icon="flickr"></ilw-icon></a></li>
         <li><a href="http://example.com/"><ilw-icon size="44px" icon="github"></ilw-icon></a></li>
         <li><a href="http://example.com/"><ilw-icon size="44px" icon="instagram"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="linkedIn"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="linkedin"></ilw-icon></a></li>
         <li><a href="http://example.com/"><ilw-icon size="44px" icon="mastodon"></ilw-icon></a></li>
         <li><a href="http://example.com/"><ilw-icon size="44px" icon="pinterest"></ilw-icon></a></li>
         <li><a href="http://example.com/"><ilw-icon size="44px" icon="reddit"></ilw-icon></a></li>
