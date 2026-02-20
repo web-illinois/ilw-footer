@@ -35,6 +35,9 @@ export class Footer extends LitElement {
   @queryAssignedElements({ slot: 'cookies-button' })
   _cookiesButton?: Array<HTMLElement>
 
+  @queryAssignedElements({ slot: 'social' })
+  _social?: Array<HTMLElement>
+
   @property({
     attribute: false
   })
@@ -154,6 +157,18 @@ export class Footer extends LitElement {
     if (this._cookiesButton === undefined || this._cookiesButton.length === 0) {
       console.warn('No cookie banner found. Assigning standard Illinois cookie banner.')
       this.generateCookieBanner();
+    }
+
+    this.checkSocialDataService(this._social);
+  }
+
+  private checkSocialDataService(social?: Array<HTMLElement>): void {
+    if (social === undefined || social.length === 0) {
+      return;
+    }
+
+    if (social.some(e => e.innerHTML.includes('data-service'))) {
+      console.warn("ilw-footer: Use of the 'data-service' attribute in social media icons is deprecated.\nSee https://github.com/web-illinois/ilw-footer/blob/main/README.md for update instructions.");
     }
   }
 
