@@ -71,26 +71,26 @@ is recommended.
 
     <nav slot="social" aria-label="Social media">
       <ul>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="bluesky"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="calendar"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="facebook"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="flickr"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="github"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="instagram"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="linkedin"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="mastodon"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="pinterest"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="reddit"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="snapchat"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="spotify"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="threads"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="tiktok"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="twitter"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="weibo"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="whatsapp"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="x"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="yelp"></ilw-icon></a></li>
-        <li><a href="http://example.com/"><ilw-icon size="44px" icon="youtube"></ilw-icon></a></li>  
+        <li><a href="http://example.com/"><ilw-icon alt="Our Bluesky account" icon="bluesky" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our events calendar account" icon="calendar" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our Facebook account" icon="facebook" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our Flickr account" icon="flickr" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our GitHub account" icon="github" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our Instagram account" icon="instagram" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our LinkedIn account" icon="linkedin" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our Mastodon account" icon="mastodon" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our Pinterest account" icon="pinterest" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our Reddit account" icon="reddit" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our Snapchat account" icon="snapchat" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our Spotify account" icon="spotify" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our Threads account" icon="threads" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our TikTok account" icon="tiktok" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our Twitter account" icon="twitter" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our Weibo account" icon="weibo" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our WhatsApp account" icon="whatsapp" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our X account" icon="x" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our Yelp account" icon="yelp" size="44px"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon alt="Our YouTube account" icon="youtube" size="44px"></ilw-icon></a></li>
       </ul>
     </nav>
 </ilw-footer>
