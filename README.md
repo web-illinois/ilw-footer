@@ -22,7 +22,7 @@ The footer component defines an area at the bottom of the page which should cont
 |-------------------------|------------------------------------------------------------------|
 | `slot="primary-unit"`   | Assigns unit name to left column.                                |
 | `slot="site-name"`      | Assigns site name to left column.                                |
-| `slot="address"`        | Assigns address to left column.                                  |
+| `slot="address"`        | Assigns address to left column. (Note icon **DEPRECATION**.)     |
 | `slot="social"`         | Assigns social media links to left column.                       |
 | `slot="actions"`        | Assigns call to action links to right column.                    |
 | `slot="cookies-button"` | **DEPRECATED** Includes cookie banner and button in lower edge.  |
@@ -60,10 +60,10 @@ The footer contains slots for site name (`site-name`), primary unit (`primary-un
 
 ### Social Media
 
-The social media slot (`social`) should be used for social media links. Icons for supported sites may be added using the `data-service` attribute.
+The social media slot (`social`) should be used for social media links. The use of [ilw-icon components](https://github.com/web-illinois/ilw-icon)
+is recommended.
 
-Social media icons are drawn from the official campus icon set (<https://cdn.brand.illinois.edu/icons.html>).
-Icons for unsupported sites may be added by targeting the `social` slot adding the necessary inline style rules to the unsupported link.
+**DEPRECATED:** Automated icon support using the `data-service` attribute is deprecated.
 
 ```html
 <ilw-footer>
@@ -71,27 +71,26 @@ Icons for unsupported sites may be added by targeting the `social` slot adding t
 
     <nav slot="social" aria-label="Social media">
       <ul>
-        <li><a data-service="bluesky" href="http://example.com/">Bluesky</a></li>
-        <li><a data-service="calendar" href="http://example.com/">Calendar</a></li>
-        <li><a data-service="facebook" href="http://example.com/">Facebook</a></li>
-        <li><a data-service="flickr" href="http://example.com/">flickr</a></li>
-        <li><a data-service="github" href="http://example.com/">GitHub</a></li>
-        <li><a data-service="instagram" href="http://example.com/">Instagram</a></li>
-        <li><a data-service="linkedin" href="http://example.com/">LinkedIn</a></li>
-        <li><a data-service="mastodon" href="http://example.com/">Mastodon</a></li>
-        <li><a data-service="pinterest" href="http://example.com/">Pinterest</a></li>
-        <li><a data-service="reddit" href="http://example.com/">Reddit</a></li>
-        <li><a data-service="snapchat" href="http://example.com/">Snapchat</a></li>
-        <li><a data-service="spotify" href="http://example.com/">Spotify</a></li>
-        <li><a data-service="threads" href="http://example.com/">Threads</a></li>
-        <li><a data-service="tiktok" href="http://example.com/">TikTok</a></li>
-        <li><a data-service="twitter" href="http://example.com/">Twitter</a></li>
-        <li><a data-service="weibo" href="http://example.com/">Weibo</a></li>
-        <li><a data-service="whatsapp" href="http://example.com/">WhatsApp</a></li>
-        <li><a data-service="x" href="http://example.com/">X</a></li>
-        <li><a data-service="yelp" href="http://example.com/">Yelp</a></li>
-        <li><a data-service="youtube" href="http://example.com/">YouTube</a></li>
-        <li><a href="#" style="--ilw-footer-social-icon: url('blue.svg'); --ilw-footer-social-icon-hover: url('orange.svg');">Custom Site</a></li>  
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="bluesky"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="calendar"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="facebook"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="flickr"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="github"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="instagram"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="linkedIn"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="mastodon"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="pinterest"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="reddit"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="snapchat"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="spotify"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="threads"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="tiktok"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="twitter"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="weibo"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="whatsapp"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="x"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="yelp"></ilw-icon></a></li>
+        <li><a href="http://example.com/"><ilw-icon size="44px" icon="youtube"></ilw-icon></a></li>  
       </ul>
     </nav>
 </ilw-footer>
@@ -207,6 +206,8 @@ Links in the campus footer section (those added and maintained as part of the ca
 ## Deprecations
 
 **Cookies button slot:** The Illinois cookie button and script are now included by default. During the deprecation period, existing cookie buttons will be honored. Remove references to `slot="cookies-button"`.
+
+**Social icon data-service:** Automated social media icon selection using the link's `data-service` attribute is no longer recommended. Existing `data-service`-enabled links will be honored during the deprecation period. Update links by removing `data-service="icon"` and replacing link text with the corresponding ilw-icon component.
 
 ## External References
 
