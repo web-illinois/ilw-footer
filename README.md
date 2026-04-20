@@ -113,7 +113,9 @@ Use the action slot (`actions`) for call-to-action links.
 
 ### Menu Columns
 
-Up to three columns can be defined in the right two-thirds of the footer.
+Up to two columns can be defined in the right two-thirds of the footer by including the [ilw-grid](https://github.com/web-illinois/ilw-grid) component.
+
+**Single column:**
 
 ```html
 <ilw-footer>
@@ -146,6 +148,44 @@ Up to three columns can be defined in the right two-thirds of the footer.
         <li><a href="http://example.com/">Link four</a></li>
       </ul>
     </nav>
+</ilw-footer>
+```
+
+**Two columns:**
+
+```html
+<ilw-footer>
+  <ilw-grid theme="gray">
+    <nav class="ilw-footer-menu" aria-labelledby="menu-1">
+      <h2 id="menu-1">First Menu</h2>
+      <ul>
+        <li><a href="http://example.com/">Link one</a></li>
+        <li><a href="http://example.com/">Link two</a></li>
+        <li><a href="http://example.com/">Link three</a></li>
+        <li><a href="http://example.com/">Link four</a></li>
+      </ul>
+    </nav>
+
+    <nav class="ilw-footer-menu" aria-labelledby="menu-2">
+      <h2 id="menu-2">Second Menu</h2>
+      <ul>
+        <li><a href="http://example.com/">Link one</a></li>
+        <li><a href="http://example.com/">Link two</a></li>
+        <li><a href="http://example.com/">Link three</a></li>
+        <li><a href="http://example.com/">Link four</a></li>
+      </ul>
+    </nav>
+
+    <nav class="ilw-footer-menu" aria-labelledby="menu-3">
+      <h2 id="menu-3">Third Menu</h2>
+      <ul>
+        <li><a href="http://example.com/">Link one</a></li>
+        <li><a href="http://example.com/">Link two</a></li>
+        <li><a href="http://example.com/">Link three</a></li>
+        <li><a href="http://example.com/">Link four</a></li>
+      </ul>
+    </nav>
+  </ilw-grid>
 </ilw-footer>
 ```
 
