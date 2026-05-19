@@ -179,12 +179,14 @@ ilw-footer {
         a[data-service="yelp"],
         a[data-service="youtube"] {
             display: block;
+            width: max(22px, 2.75rem);
+            height: max(22px, 2.75rem);
             background-image: var(--ilw-footer-social-icon);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
             text-indent: 33rem;
-            
+
             &:hover {
                 background-image: var(--ilw-footer-social-icon-hover);
             }
