@@ -341,8 +341,8 @@ ilw-footer {
         }
     }
 
-    a[slot="actions"]:first,
-    button[slot="actions"]:first,
+    a[slot="actions"]:first-of-type,
+    button[slot="actions"]:first-of-type,
     *[slot="actions"] a:first-child,
     *[slot="actions"] button:first-child {
         margin-left: 0;
