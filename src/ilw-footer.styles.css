@@ -156,6 +156,10 @@
     text-decoration: underline;
 }
 
+.campus a:hover {
+    color: var(--il-orange);
+}
+
 .campus a:focus {
     fill: var(--ilw-link--focus-color);
     background-color: var(--ilw-link--focus-background-color);
