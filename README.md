@@ -42,6 +42,8 @@ For sites with multiple sponsorships, this is a common location to collect up th
 
 The footer contains slots for site name (`site-name`), primary unit (`primary-unit`), and address (`address`).
 
+**Accessibility:** Note that phone links must contain an `aria-label` attribute describing the phone number's destination.
+
 ```html
 <ilw-footer>
     <p slot="primary-unit"><a href="/">Strategic Communications and Marketing</a></p>
@@ -53,7 +55,7 @@ The footer contains slots for site name (`site-name`), primary unit (`primary-un
         MC-0000<br>
         Champaign, IL 61820</p>
       <p>Email: <a href="mailto:address@example.com">address@example.com</a></p>
-      <p>Phone: <a href="tel:+12175551234">(217) 555-1234</a></p>
+      <p>Phone: <a href="tel:+12175551234" aria-label="Example Site Office">(217) 555-1234</a></p>
     </address>
 </ilw-footer>
 ```
