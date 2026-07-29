@@ -1,5 +1,4 @@
 import { CSSResultGroup, LitElement, PropertyValues, html, unsafeCSS } from "lit";
-// @ts-ignore
 import styles from './ilw-footer.styles.css?inline';
 import './ilw-footer.css';
 import { default as wordmark } from "./wordmark.svg"
