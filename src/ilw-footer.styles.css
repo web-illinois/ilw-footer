@@ -83,15 +83,15 @@
     height: 1.5625rem;
 }
 
+.campus .logo a:hover {
+    outline: 2px dotted;
+}
+
 .campus .logo svg {
     display: block;
     position: relative;
     width: 100%;
     height: 100%;
-}
-
-.campus .logo a:hover {
-    outline: 2px dotted;
 }
 
 .campus svg .illinois {
