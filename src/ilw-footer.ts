@@ -59,7 +59,7 @@ export class Footer extends LitElement {
   }
 
   async loadData() {
-    const resp = await fetch('https://cdn.brand.illinois.edu/data/footer.json');
+    const resp = await fetch('https://api.brand.illinois.edu/footer');
     this._data = await resp.json();
   }
 
