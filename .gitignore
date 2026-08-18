@@ -129,8 +129,9 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# playwright test output
+# test output
 test-results/
 var/
 playwright-report/
 __screenshots__/
+.vitest-attachments/
