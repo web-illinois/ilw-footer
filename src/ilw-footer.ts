@@ -94,15 +94,16 @@ export class Footer extends LitElement {
   }
 
   renderLegalFooter() {
+    if (this._data === undefined) return;
     return html`
         <div class="legal section-container">
           <div class="legal section">
             <div class="cookies-button-and-links">
               <slot name="cookies-button"></slot>
-              <a href="${this._data?.privacy.href}?${this._utm}">${this._data?.privacy.label}</a>
-              <a href="${this._data?.copyright.href}?${this._utm}">${this._data?.copyright.label}</a>
+              <a href="${this._data.privacy.href}?${this._utm}">${this._data.privacy.label}</a>
+              <a href="${this._data.copyright.href}?${this._utm}">${this._data.copyright.label}</a>
               <slot name="legal-link"></slot>
-              <a href="${this._data?.accessibility.label}?${this._utm}">${this._data?.accessibility.label}</a>
+              <a href="${this._data.accessibility.label}?${this._utm}">${this._data.accessibility.label}</a>
             </div>
           </div>
         </div>`;
