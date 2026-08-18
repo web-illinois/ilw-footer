@@ -11,8 +11,8 @@ export interface CampusFooterSection {
 export interface CampusFooterData {
     illinois: {
         sections: CampusFooterSection[];
+        privacy: CampusLink,
+        copyright: CampusLink,
+        accessibility: CampusLink
     },
-    privacy: CampusLink,
-    copyright: CampusLink,
-    accessibility: CampusLink
 }

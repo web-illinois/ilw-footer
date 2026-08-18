@@ -44,6 +44,7 @@
     "devDependencies": {
         "@axe-core/playwright": "^4.12.1",
         "@illinois-toolkit/ilw-core": "^2.1.0",
+        "@open-wc/testing-helpers": "^3.0.1",
         "@playwright/test": "^1.62.0",
         "@types/node": "^26.1.2",
         "@vitest/browser": "^4.1.10",
