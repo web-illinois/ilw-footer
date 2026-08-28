@@ -103,7 +103,7 @@ export class Footer extends LitElement {
               <a href="${this._data.illinois.privacy.href}?${this._utm}">${this._data.illinois.privacy.label}</a>
               <a href="${this._data.illinois.copyright.href}?${this._utm}">${this._data.illinois.copyright.label}</a>
               <slot name="legal-link"></slot>
-              <a href="${this._data.illinois.accessibility.label}?${this._utm}">${this._data.illinois.accessibility.label}</a>
+              <a href="${this._data.illinois.accessibility.href}?${this._utm}">${this._data.illinois.accessibility.label}</a>
             </div>
           </div>
         </div>`;
