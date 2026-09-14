@@ -29,7 +29,7 @@
     "module": "./dist/ilw-footer.js",
     "scripts": {
         "dev": "vite",
-        "build": "tsc -b && vite build --config vite.transpile.config.ts --emptyOutDir && vite build --config vite.build.config.ts --emptyOutDir",
+        "build": "vite build --config vite.transpile.config.ts --emptyOutDir && vite build --config vite.build.config.ts --emptyOutDir && tsc -b",
         "preview": "vite preview",
         "prepack": "npm run build",
         "test": "vitest run --browser.headless",
