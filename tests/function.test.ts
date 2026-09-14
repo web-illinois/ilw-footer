@@ -1,5 +1,4 @@
 import { expect, test } from "vitest";
-import { render } from "vitest-browser-lit";
 import { html } from "lit";
 import { fixture } from "@open-wc/testing-helpers";
 import "../src/ilw-footer";

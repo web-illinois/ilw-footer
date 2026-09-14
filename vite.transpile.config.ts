@@ -24,5 +24,8 @@ export default defineConfig({
     server: {
         hmr: false,
     },
-    plugins: [dts()],
+    plugins: [dts({
+        tsconfigPath: "../tsconfig.json",
+        include: ["**/*.ts", "**/*.d.ts"]
+    })],
 });
