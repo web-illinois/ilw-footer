@@ -7,16 +7,46 @@
   "purpose": "Create a thematically unified footer navigation for university websites.",
   "customtemplates": [
     {
+      "name": "Development Only",
+      "path": "/component/ilw-footer/custom-dev/index.html",
+      "notes": "Use the guided custom builder for this component."
+    },
+    {
       "name": "Custom Template",
-      "path": "/notes/footer/index.html",
+      "path": "/component/ilw-footer/custom/index.html",
       "notes": "Use the guided custom builder for this component."
     }
   ],
   "versions": [
     {
+      "name": "1.0",
+      "notes": "",
+      "template": "custom"
+    },
+    {
+      "name": "1.1",
+      "notes": "",
+      "template": "custom"
+    },
+    {
+      "name": "1.2",
+      "notes": "",
+      "template": "custom"
+    },
+    {
+      "name": "1.3",
+      "notes": "",
+      "template": "custom"
+    },
+    {
+      "name": "1.4",
+      "notes": "",
+      "template": "custom"
+    },
+    {
       "name": "1.5",
       "notes": "",
-      "template": "1.5"
+      "template": "custom"
     }
   ]
 }
