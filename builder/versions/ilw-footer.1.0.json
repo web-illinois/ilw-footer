@@ -1,0 +1,28 @@
+{
+    "template": "1.0",
+    "id": "ilw-footer",
+    "notes": "",
+    "usejs": true,
+    "usecss": true,
+    "builder-information": {
+        "element-name": "ilw-footer",
+        "addon-html": "",
+        "parent-style": ""
+    },
+    "added-components": [
+        {
+            "name": "Icon",
+            "description": "You can use the icon component inside the icon panel.",
+            "link": "https://builder3.toolkit.illinois.edu/component/ilw-icon/1-1/index.html",
+            "css": "https://cdn.toolkit.illinois.edu/ilw-icon/1/ilw-icon.css",
+            "js": "https://cdn.toolkit.illinois.edu/ilw-icon/1/ilw-icon.js"
+        }
+    ],
+    "samples": [],
+    "attributes-fixed": [],
+    "attributes-text": [],
+    "attributes": [],
+    "classes-fixed": [],
+    "classes": [],
+    "css-variables": []
+}
