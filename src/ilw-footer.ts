@@ -179,7 +179,7 @@ export class Footer extends LitElement {
     button.setAttribute('slot', 'cookies-button');
     button.innerText = 'About Cookies';
     const footer = document.getElementsByTagName(this.TagName);
-    if (!footer) {
+    if (!footer || footer.length === 0) {
       console.error('footer component not found');
       return;
     }
