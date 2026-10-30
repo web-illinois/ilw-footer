@@ -170,7 +170,7 @@
 .legal.section-container {
     background-color: var(--il-blue);
     color: white;
-    border-top: 0.5rem solid var(--il-industrial-darker-2);
+    border-top: 0.5rem solid var(--il-blue-30);
 }
 
 .legal a {
@@ -194,16 +194,11 @@
 
 .cookies-button-and-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: baseline;
+    flex-wrap: wrap;
     gap: 1.875rem;
-}
-
-@container (min-width: 600px) {
-    .cookies-button-and-links {
-        flex-direction: row;
-    }
 }
 
 @container (min-width: 960px) {
