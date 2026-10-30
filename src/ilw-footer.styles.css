@@ -194,16 +194,11 @@
 
 .cookies-button-and-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    align-items: start;
+    align-items: baseline;
+    flex-wrap: wrap;
     gap: 1.875rem;
-}
-
-@container (min-width: 600px) {
-    .cookies-button-and-links {
-        flex-direction: row;
-    }
 }
 
 @container (min-width: 960px) {
