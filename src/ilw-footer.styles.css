@@ -170,7 +170,7 @@
 .legal.section-container {
     background-color: var(--il-blue);
     color: white;
-    border-top: 0.5rem solid var(--il-industrial-darker-2);
+    border-top: 0.5rem solid var(--il-blue-30);
 }
 
 .legal a {
