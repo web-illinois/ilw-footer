@@ -388,6 +388,19 @@ ilw-footer {
     }
 
     /* Note duplicate rule in ilw-footer.styles.ts */
+    a[slot="legal-link"]:hover {
+        outline: 2px dotted;
+    }
+    
+    /* Note duplicate rule in ilw-footer.styles.ts */
+    a[slot="legal-link"]:focus {
+        fill: var(--ilw-link--focus-color);
+        background-color: var(--ilw-link--focus-background-color);
+        outline: var(--ilw-link--focus-outline);
+        color: var(--il-blue);
+    }
+
+    /* Note duplicate rule in ilw-footer.styles.ts */
     button[slot="cookies-button"],
     a[slot="cookies-button"] {
         background-color: var(--il-industrial-darker-2);
