@@ -54,6 +54,11 @@ ilw-footer {
     }
 
     a[slot="site-name"]:hover,
+    *[slot="site-name"] a:hover {
+        color: var(--il-altgeld);
+    }
+
+    a[slot="site-name"]:hover,
     *[slot="site-name"] a:hover,
     a[slot="site-name"]:focus,
     *[slot="site-name"] a:focus {
@@ -90,6 +95,11 @@ ilw-footer {
     a[slot="primary-unit"]:focus,
     *[slot="primary-unit"] a:focus {
         text-decoration: underline;
+    }
+
+    a[slot="primary-unit"]:hover,
+    *[slot="primary-unit"] a:hover {
+        color: var(--il-altgeld);
     }
 
     a[slot="primary-unit"]:focus,
