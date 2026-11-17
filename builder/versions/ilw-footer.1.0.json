@@ -12,7 +12,7 @@
     "added-components": [
         {
             "name": "Icon",
-            "description": "You can use the icon component inside the icon panel.",
+            "description": "You can use the icon component inside the footer.",
             "link": "https://builder3.toolkit.illinois.edu/component/ilw-icon/1-1/index.html",
             "css": "https://cdn.toolkit.illinois.edu/ilw-icon/1/ilw-icon.css",
             "js": "https://cdn.toolkit.illinois.edu/ilw-icon/1/ilw-icon.js"
