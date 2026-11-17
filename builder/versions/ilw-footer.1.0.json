@@ -16,6 +16,13 @@
             "link": "https://builder3.toolkit.illinois.edu/component/ilw-icon/1-1/index.html",
             "css": "https://cdn.toolkit.illinois.edu/ilw-icon/1/ilw-icon.css",
             "js": "https://cdn.toolkit.illinois.edu/ilw-icon/1/ilw-icon.js"
+        },
+        {
+            "name": "Columns",
+            "description": "You can use columns component inside the footer.",
+            "link": "https://builder3.toolkit.illinois.edu/component/ilw-columns/1-3/index.html",
+            "css": "https://cdn.toolkit.illinois.edu/ilw-columns/1/ilw-columns.css",
+            "js": "https://cdn.toolkit.illinois.edu/ilw-columns/1/ilw-columns.js"
         }
     ],
     "samples": [],
